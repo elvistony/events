@@ -1,0 +1,519 @@
+:root {
+  /* Couple Colors */
+  --sage-green: rgb(124, 154, 124);
+  --mauve: rgb(158, 86, 98);
+  
+  /* Pastel Palette */
+  --pastel-cream: #faf6f3;
+  --pastel-sage: #e8f0e8;
+  --pastel-rose: #f5e8ed;
+  --pastel-gold: #faf0e6;
+  --pastel-lavender: #f0e8f5;
+  
+  /* Dark/Strong Versions for Buttons & Accents */
+  --dark-sage: rgb(104, 134, 104);
+  --dark-mauve: rgb(138, 66, 78);
+}
+
+/* Override Bootstrap primary colors */
+.btn-primary,
+.page-section.bg-primary {
+  background-color: var(--sage-green) !important;
+  border-color: var(--sage-green) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--dark-sage) !important;
+  border-color: var(--dark-sage) !important;
+}
+
+.btn-primary.btn-xl {
+  background-color: var(--sage-green) !important;
+  border-color: var(--sage-green) !important;
+  padding: 1.25rem 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.btn-primary.btn-xl:hover {
+  background-color: var(--dark-sage) !important;
+}
+
+.text-primary {
+  color: var(--mauve) !important;
+}
+
+a.text-primary:hover {
+  color: var(--dark-mauve) !important;
+}
+
+/* Light/Accent Sections */
+.page-section.bg-light {
+  background-color: var(--pastel-cream) !important;
+}
+
+.page-section:not(.bg-primary):not(.bg-light):not(.bg-dark) {
+  background-color: var(--pastel-lavender) !important;
+}
+
+#about {
+  background-color: var(--sage-green) !important;
+}
+
+#about h2,
+#about p {
+  color: white;
+}
+
+#services {
+  background-color: var(--pastel-cream) !important;
+}
+
+#event-madhuram,
+#event-reception {
+  background-color: var(--pastel-cream) !important;
+}
+
+#event-madhuram h2,
+#event-madhuram h5,
+#event-reception h2,
+#event-reception h5 {
+  color: var(--mauve);
+}
+
+#event-wedding {
+  background-color: var(--pastel-cream) !important;
+}
+
+#event-wedding h2,
+#event-wedding h5 {
+  color: var(--sage-green);
+}
+
+/* Bible Quote Banners */
+#quote-1,
+#quote-2,
+#quote-3 {
+  background-color: var(--mauve) !important;
+  /* border-top: 3px solid var(--sage-green);
+  border-bottom: 3px solid var(--sage-green); */
+}
+
+#quote-1 h4,
+#quote-2 h4,
+#quote-3 h4 {
+  color: white !important;
+}
+
+/* Link Colors */
+a {
+  color: var(--mauve);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--dark-mauve);
+}
+
+.nav-link {
+  color: var(--mauve) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--dark-sage) !important;
+}
+
+.navbar-brand {
+  color: var(--sage-green) !important;
+}
+
+/* Form Elements */
+.form-control:focus {
+  border-color: var(--sage-green);
+  box-shadow: 0 0 0 0.2rem rgba(124, 154, 124, 0.25);
+}
+
+.invalid-feedback {
+  color: var(--dark-mauve);
+}
+
+.divider {
+  background: linear-gradient(to right, transparent, var(--mauve), transparent);
+  height: 3px;
+  max-width: 100px;
+  margin: 1.5rem auto;
+}
+
+.divider-light {
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+/* Masthead Styling */
+.masthead {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.masthead-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.masthead-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(124, 154, 124, 0.15) 0%, rgba(158, 86, 98, 0.15) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.masthead > .container {
+  z-index: 2;
+}
+
+.masthead h1 {
+  font-size: 13vh !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 5vh;
+  z-index: 2;
+}
+
+/* Trendy Dual Font Style */
+.name-first{
+    padding-bottom: 60px;
+    margin-right: -40px;
+}
+
+.name-last{
+    padding-top: 60px;
+    margin-left: -40px;
+}
+
+.name-first,
+.name-last {
+  position: relative;
+  z-index: 2;
+  font-size: inherit;
+  text-shadow: 2px 1px 3px darkslategray;
+  /* padding-bottom: 20px; */
+}
+
+.and-wrapper {
+    font-family: 'Merriweather';
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 0px;
+  min-width: 0;
+  z-index: 1;
+}
+
+.and {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: rgb(69, 64, 65);
+  opacity: 0.7;
+  /* transform: rotate(-15deg) translateY(-10px); */
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  z-index: 0;
+  margin-left: 20px;
+}
+
+
+
+@media (max-width: 400px) {
+  .masthead h1 {
+    font-size: 6vh !important;
+    gap: 1rem;
+    
+  }
+
+  .and {
+    font-size: 1.3rem;
+    
+  }
+
+  .and-wrapper {
+    height: 1.2rem;
+  }
+
+  .name-first{
+        padding-bottom: 25px;
+        margin-right: -10px;
+    }
+
+    .name-last{
+        padding-top: 30px;
+        margin-left: -20px;
+    }
+
+}
+
+.parallax {
+/* The image used */
+
+/* Full height */
+height: 100%;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.para-1{
+    background-image: url('https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg');
+}
+
+/* @media only screen and (max-device-width: 1366px) {
+.parallax {
+background-attachment: scroll;
+}
+} */
+
+/* Countdown Timer Styles */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.countdown-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .countdown-container {
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+    }
+    
+    .countdown-value {
+        font-size: 1.8rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-container {
+        gap: 10px;
+        padding: 15px 8px;
+    }
+    
+    .countdown-item {
+        min-width: 50px;
+    }
+    
+    .countdown-value {
+        font-size: 1.3rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown-container {
+        gap: 8px;
+        padding: 12px 5px;
+    }
+    
+    .countdown-item {
+        min-width: 45px;
+    }
+    
+    .countdown-value {
+        font-size: 1rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.55rem;
+    }
+}
+
+/* Event Section Styles */
+.event-map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(158, 86, 98, 0.15);
+    margin-bottom: 20px;
+    border: 2px solid var(--sage-green);
+}
+
+.event-map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#event-madhuram h2,
+#event-wedding h2,
+#event-reception-uae h2,
+#event-reception-thrissur h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#event-madhuram h5,
+#event-wedding h5,
+#event-reception-uae h5,
+#event-reception-thrissur h5 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#event-madhuram p,
+#event-wedding p,
+#event-reception-uae p,
+#event-reception-thrissur p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* UAE Reception styling - matches Madhuram pattern */
+#event-reception-uae {
+    background-color: var(--pastel-cream) !important;
+}
+
+#event-reception-uae h2,
+#event-reception-uae h5 {
+    color: var(--mauve);
+}
+
+/* Thrissur Reception styling - matches Wedding pattern */
+#event-reception-thrissur {
+    background-color: var(--pastel-cream) !important;
+}
+
+#event-reception-thrissur h2,
+#event-reception-thrissur h5 {
+    color: var(--sage-green);
+}
+
+@media (max-width: 992px) {
+    .event-map-container {
+        height: 300px;
+    }
+    
+    .order-lg-1,
+    .order-lg-2 {
+        order: 0 !important;
+    }
+}
+
+/* Portfolio Section */
+/* #portfolio {
+    background-color: var(--pastel-cream) !important;
+} */
+
+.portfolio-box-caption {
+    background: linear-gradient(135deg, rgba(124, 154, 124, 0.9), rgba(158, 86, 98, 0.9));
+}
+
+.project-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Calendar Invite Buttons */
+.event-calendar-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-outline-primary {
+    color: var(--sage-green);
+    border-color: var(--sage-green);
+    border-width: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--sage-green);
+    border-color: var(--sage-green);
+}
+
+.btn-outline-primary i {
+    margin-right: 5px;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .event-calendar-buttons {
+        margin-top: 1.5rem !important;
+    }
+}
+
