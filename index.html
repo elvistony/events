@@ -33,22 +33,21 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand great-vibes-regular" href="#page-top"><span style="color: var(--mauve) ;">M</span> <small style="color: gray;">&</small> <span style="color: var(--sage-green) ;">E</span></a>
+                <a class="navbar-brand windsong-regular" href="#page-top"><span style="color: var(--mauve) ;">M</span> <small style="color: gray;font-family: 'Merriweather';">&</small> <span style="color: var(--sage-green) ;margin-left: -8px;">E</span></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#event-madhuram">Madhuram Veppu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#event-wedding">Wedding</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wedding">Wedding</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#event-reception-uae">UAE Reception</a></li>
                         <li class="nav-item"><a class="nav-link" href="#event-reception-thrissur">Thrissur Reception</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Community Album</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#communityalbum">Community Album</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Invite</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead ">
+        <header class="masthead" id="wedding">
             <video autoplay muted playsinline class="masthead-video" poster="https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg" loop>
                 <source src="https://www.pexels.com/download/video/28572601/" type="video/mp4">
                 
@@ -65,7 +64,8 @@
                             </span>
                             <span class="name-last" style="color: var(--mauve)">Maritta</span>
                         </h1>
-                        <!-- <hr class="divider" /> -->
+                        <hr class="divider" />
+                        <h5 class="text-muted py-3">23.07.2026</h5>
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <div class="countdown-container mb-5">
@@ -145,13 +145,23 @@
                                 <i class="bi bi-calendar-plus"></i> Add to Calendar
                             </button>
                         </div>
+                        <div class="event-color-palette mt-4">
+                            <p class="small text-muted mb-2">Pick a color:</p>
+                            <div class="color-circles">
+                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Bible Quote Banner 2 -->
-        <section class="page-section text-white text-center py-5" style="background-color: var(--sage-green);" id="quote-2">
+        <section class="page-section text-white text-center py-5 bg-primary" style="background-color: var(--sage-green);" id="quote-2">
             <div class="container px-4 px-lg-5">
                 <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem;">
                     "Therefore what God has joined together, let no one separate."
@@ -183,6 +193,16 @@
                             <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('wedding')">
                                 <i class="bi bi-calendar-plus"></i> Add to Calendar
                             </button>
+                        </div>
+                        <div class="event-color-palette mt-4">
+                            <p class="small text-muted mb-2">Pick a color:</p>
+                            <div class="color-circles">
+                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -223,6 +243,16 @@
                                 <i class="bi bi-calendar-plus"></i> Add to Calendar
                             </button>
                         </div>
+                        <div class="event-color-palette mt-4">
+                            <p class="small text-muted mb-2">Pick a color:</p>
+                            <div class="color-circles">
+                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,6 +292,16 @@
                                 <i class="bi bi-calendar-plus"></i> Add to Calendar
                             </button>
                         </div>
+                        <div class="event-color-palette mt-4">
+                            <p class="small text-muted mb-2">Pick a color:</p>
+                            <div class="color-circles">
+                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -270,13 +310,13 @@
         <!-- Portfolio-->
         <div id="portfolio">
             <div class="container-fluid p-0" style="background-color: var(--pastel-cream) !important;">
-                <h2 class="text-center mt-0">Community Album</h2>
+                <h2 class="text-center pt-5">Community Album</h2>
                 <hr class="divider" />
                 <p class="text-center mb-5">Contribute to the Community Album to help us cherish the moment!</p>
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                            <img class="img-fluid" src="https://images.pexels.com/photos/13152507/pexels-photo-13152507.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -341,16 +381,21 @@
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Made by Elvis with 💖 for Maritta</div></div>
         </footer>
+        
+        <!-- Color Overlay -->
+        <div id="colorOverlay" class="color-overlay">
+            <button class="btn btn-light btn-lg return-btn" onclick="hideColorOverlay()">
+                Click to Return to Events
+            </button>
+        </div>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- Page Alter based on guest tier -->
+         <script src="js/page-url.js"></script>
     </body>
 </html>

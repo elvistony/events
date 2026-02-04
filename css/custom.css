@@ -93,9 +93,15 @@ a.text-primary:hover {
 
 /* Bible Quote Banners */
 #quote-1,
-#quote-2,
 #quote-3 {
   background-color: var(--mauve) !important;
+  /* border-top: 3px solid var(--sage-green);
+  border-bottom: 3px solid var(--sage-green); */
+}
+
+#quote-2,
+#quote-4 {
+  background-color: var(--sage-green) !important;
   /* border-top: 3px solid var(--sage-green);
   border-bottom: 3px solid var(--sage-green); */
 }
@@ -322,14 +328,14 @@ background-attachment: scroll;
 .countdown-value {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #fff;
+    color: #807f7f;
     font-family: 'Merriweather Sans', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-label {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: #424141;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 8px;
@@ -511,9 +517,78 @@ background-attachment: scroll;
     font-size: 0.875rem;
 }
 
+/* Color Palette Styles */
+.event-color-palette {
+    margin-top: 2rem;
+}
+
+.color-circles {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Color Overlay Styles */
+.color-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.color-overlay.active {
+    display: flex;
+}
+
+.return-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.return-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 @media (max-width: 768px) {
     .event-calendar-buttons {
         margin-top: 1.5rem !important;
+    }
+    
+    .color-circle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .return-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 }
 

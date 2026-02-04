@@ -182,3 +182,17 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// COLOR OVERLAY FUNCTIONALITY
+function showColorOverlay(color) {
+    const overlay = document.getElementById('colorOverlay');
+    overlay.style.backgroundColor = color;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function hideColorOverlay() {
+    const overlay = document.getElementById('colorOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Allow scrolling again
+}
