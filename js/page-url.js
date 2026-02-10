@@ -1,8 +1,12 @@
+/**
+ * page-url.js
+ * Drop-in replacement for managing event visibility and language routing
+ */
+
 // Translation layer: alphanumeric codes mapped to event IDs
-// Share the codes with guests, not the event names
 const codeToEvents = {
     "a3ghd45d": {
-        events: ["event-madhuram","event-wedding","event-reception-uae"]
+        events: ["event-madhuram", "event-wedding", "event-reception-uae"]
     },
     "bjsg4st4": {
         events: ["event-reception-uae"]
@@ -15,54 +19,91 @@ const codeToEvents = {
     }
 };
 
-// All event section IDs that can be hidden/shown
+// Global state
+let SHOW_INVITE = false;
+let eventId = ""; // Global variable for other scripts to access
+
 const allEvents = ["event-madhuram", "event-wedding", "event-reception-uae", "event-reception-thrissur"];
 
-// Hide all event sections initially
 function hideAllEvents() {
-    allEvents.forEach(eventId => {
-        const element = document.getElementById(eventId);
-        if (element) {
-            element.style.display = "none";
-        }
+    allEvents.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) element.style.display = "none";
     });
 }
 
-// Show specific events based on allowed list
 function showEvents(allowedEvents) {
-    allowedEvents.forEach(eventId => {
-        const element = document.getElementById(eventId);
+    allowedEvents.forEach(id => {
+        const element = document.getElementById(id);
         if (element) {
             element.style.display = "block";
+            SHOW_INVITE = true;
         }
     });
 }
 
-// Initialize page based on URL hash
+/**
+ * Parses the custom hash format: #/e/<eventid>/lang/<langcode>
+ */
+function parseHash() {
+    const hash = window.location.hash;
+    // Regex matches /e/followed-by-id and optionally /lang/followed-by-code
+    const regex = /#\/e\/([^/]+)(?:\/lang\/([^/]+))?/;
+    const match = hash.match(regex);
+
+    if (match) {
+        return {
+            extractedEventId: match[1],
+            extractedLang: match[2] || null
+        };
+    }
+    return null;
+}
+
 function initializePageFromHash() {
-    // Get the hash from the URL (without the #)
-    const hash = window.location.hash.substring(1);
+    const hashData = parseHash();
+    const savedCode = localStorage.getItem('eventCode');
     
-    // Hide all events first
     hideAllEvents();
-    
-    // Check if a valid code hash exists
-    if (hash && codeToEvents[hash]) {
-        // Show only the events for this code
-        showEvents(codeToEvents[hash].events);
-    } else if (hash === "") {
-        // No hash provided - hide all events (guest needs to be invited)
-        hideAllEvents();
+
+    let targetCode = "";
+
+    // Priority 1: Valid code in the URL
+    if (hashData && codeToEvents[hashData.extractedEventId]) {
+        targetCode = hashData.extractedEventId;
+        localStorage.setItem('eventCode', targetCode);
+        
+        // If a language was also in the URL, apply it via the global function
+        if (hashData.extractedLang && typeof setLanguage === 'function') {
+            const langMap = { 'en': 'English', 'ar': 'Arabic', 'hi': 'Hindi', 'ml': 'Malayalam' };
+            if (langMap[hashData.extractedLang]) {
+                // We use a slight delay or direct call to ensure translations.js is ready
+                setLanguage(hashData.extractedLang, langMap[hashData.extractedLang]);
+            }
+        }
+    } 
+    // Priority 2: Fallback to localStorage
+    else if (savedCode && codeToEvents[savedCode]) {
+        targetCode = savedCode;
+    }
+
+    // Execution: Apply visibility
+    if (targetCode) {
+        eventId = targetCode; // Update global variable
+        showEvents(codeToEvents[targetCode].events);
     } else {
-        // Invalid hash - hide all events for security
-        hideAllEvents();
+        // Cleanup if an invalid code was stored
+        localStorage.removeItem('eventCode');
     }
 }
 
-// Run on page load only - don't react to hash changes from navigation links
+// Run on page load
 if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializePageFromHash);
+    document.addEventListener("DOMContentLoaded", () => {
+        initializePageFromHash();
+        if (typeof loadEnvelope === 'function') loadEnvelope();
+    });
 } else {
-    // If script loads after DOMContentLoaded, run immediately
     initializePageFromHash();
+    if (typeof loadEnvelope === 'function') loadEnvelope();
 }

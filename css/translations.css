@@ -1,0 +1,40 @@
+
+body[data-lang="ml"]{
+    .masthead h1 {
+    font-size: 5vh !important;
+    gap: 1rem;
+  }
+}
+
+body[data-lang="ar"]{
+    .and-wrapper {
+    height: 1.2rem;
+    margin-right: 20px;
+  }
+
+}
+
+body[data-lang="hi"]{
+    /* .masthead h1 {
+    font-size: 5vh !important;
+    gap: 1rem;
+  } */
+
+  .and-wrapper {
+    height: 1.2rem;
+  }
+
+  .name-first{
+        padding-bottom: 25px;
+        margin-right: -10px;
+    }
+
+  .name-last{
+      padding-top: 115px;
+      margin-left: -20px;
+  }
+}
+
+.lang-option:hover{
+    color: var(--theme-burgundy);
+}

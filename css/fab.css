@@ -1,0 +1,126 @@
+/* FAB Container */
+.fab-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+/* Base Circle Styles */
+.btn-fab {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu Button (Larger) */
+.btn-menu {
+    width: 65px;
+    height: 65px;
+    background: none;
+    backdrop-filter: blur(10px) contrast(0.9);
+    /* background-color: var(--burgundy); */
+    font-size: 24px;
+}
+
+/* Play Button (Smaller) */
+.btn-play {
+    width: 50px;
+    height: 50px;
+    background: none;
+    backdrop-filter: blur(10px) contrast(0.9);
+    /* background-color: var(--blush); */
+    font-size: 18px;
+}
+
+.btn-fab:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Upward Drawer */
+.fab-drawer {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    /* background: white; */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    left: auto;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.fab-drawer.show {
+    display: flex;
+    animation: slideUp 0.3s ease-out;
+}
+
+.drawer-item {
+    padding: 10px;
+    /* border-bottom: 1px solid #eee; */
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px) contrast(0.5);
+    text-decoration: none !important;
+}
+
+.drawer-item:hover {
+    background-color: #fff0f3;
+}
+
+.drawer-item i {
+    margin-right: 12px;
+    color: var(--burgundy);
+    width: 20px;
+    text-align: center;
+}
+
+.lang-label {
+    font-size: 0.8rem;
+    color: var(--blush);
+    font-weight: bold;
+    margin-left: auto;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Customization */
+.modal-header {
+    background-color: var(--burgundy);
+    color: white;
+}
+.lang-option {
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.lang-option:hover {
+    background-color: var(--blush);
+    color: white;
+}

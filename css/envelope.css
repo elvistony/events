@@ -1,0 +1,281 @@
+:root {
+    --base-paper: #fff6d1;
+    --paper-left: 0.9;
+    --paper-right: 0.9;
+    --paper-bottom: 1;
+    --text-color: #e7a200;
+    --speed: 5s;
+    --texture-repeat:150vh;
+    --texture: url("https://img.freepik.com/free-vector/gradient-golden-linear-background_23-2148957754.jpg");
+}
+
+/* https://www.transparenttextures.com/patterns/gray-floral.png */
+/* https://wallpaper.dog/large/20364527.jpg */
+
+.envelope-container {
+    margin: 0;
+    padding: 0;
+    z-index: 10000;
+    /* width: 100vw; height: 100vh; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* background-color: #fffdc6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1800px; /* Increased perspective for better 3D realism */
+    font-family: "Georgia", serif;
+}
+
+.invitation-text {
+    position: absolute;
+    bottom: 12vh;
+    width: 100%;
+    text-align: center;
+    z-index: 6;
+    color: var(--theme-burgundy);
+    font-family: "Mea Culpa", cursive;
+    font-size: 8vh;
+    font-style: italic;
+    padding: 5px 10px;
+    /* text-shadow: 1px 1px 13px #890505; */
+    /* background-color: #7f323c; */
+    transition: opacity 0.5s;
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+/* --- THE BACKGROUND REVEAL CARD --- */
+.invitation-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9) translateZ(-50px);
+    width: 85vw;
+    max-width: 500px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 0;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.7s;
+}
+
+.envelope-wrapper.open .invitation-card {
+    opacity: 1;
+    /* Brings it forward slightly as it appears */
+    transform: translate(-50%, -50%) scale(1) translateZ(0);
+}
+
+.shad{
+    filter: drop-shadow(10px 8px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* --- THE MOVING BODY SECTION (Bottom Half) --- */
+.envelope-main-body {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* Delayed slide down */
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+    transition: opacity 2s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+    transform-style: preserve-3d;
+}
+
+.flap {
+    position: absolute;
+    background-image: var(--texture);
+    background-repeat: auto;
+    background-size: var(--texture-repeat);
+    pointer-events: none;
+}
+
+/* The bottom three flaps */
+.flap-left {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    
+    background-color: var(--base-paper);
+    clip-path: polygon(0% 0%, 100% 60%, 0% 100%);
+    z-index: 1;
+    /* box-shadow: inset -20px 0px 60px 20px rgba(0, 0, 0, 0.8); */
+    filter: drop-shadow(4px 0 6px rgba(0, 0, 0, 0.1)) contrast(var(--paper-left));
+}
+.flap-right {
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--base-paper);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 60%);
+    z-index: 1;
+    /* box-shadow: inset 20px 0px 60px 20px rgba(0, 0, 0, 0.8); */
+    filter: drop-shadow(-4px 0 6px rgba(0, 0, 0, 0.1)) contrast(var(--paper-right));
+}
+.flap-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--base-paper);
+    clip-path: polygon(0% 100%, 40% 0%, 60% 0%, 100% 100%);
+    z-index: 2;
+    /* filter: drop-shadow(0 -10px 15px rgba(0, 0, 0, 0.15)) contrast(var(--paper-bottom)); */
+}
+
+/* --- THE DYNAMIC SHADOW LAYER --- */
+
+/* --- THE TOP LIP & SEAL CONTAINER --- */
+.top-lip-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    z-index: 10;
+    transform-origin: top;
+    transition:
+        transform var(--speed) cubic-bezier(0.5, 0, 0.2, 1),
+        opacity 0.5s ease var(--speed);
+    transform-style: preserve-3d;
+    /* Crucial: hides the back so it doesn't look upside down at the end */
+    backface-visibility: hidden;
+}
+
+.shadow {
+    z-index: 4 !important; /* Must be behind the body flaps */
+    filter: brightness(0) blur(10px); /* Pitch black and blurry */
+    opacity: 0.3;
+    height: 62%;
+    pointer-events: none;
+    /* We only want to animate height and transform independently of the main flap */
+    transition:
+        height var(--speed) ease-out,
+        transform var(--speed) ease-out,
+        opacity 1s ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-lip-container{
+    height: 50%;
+  }
+
+  .shadow {
+    height: 50%;
+  }
+
+  .flap{
+    background-size: 120vh;
+  }
+
+  .flap-left {
+    clip-path: polygon(0% 20%, 100% 40%, 0% 100%);
+  }
+
+  .flap-bottom {
+   height: 70%;
+   clip-path: polygon(100% 100%, 100% 20%, 50% 0%, 0% 20%, 0% 100%);
+  }
+
+    .flap-right {
+    clip-path: polygon(100% 20%, 100% 100%, 0% 40%);
+  }
+
+  .invitation-text {
+    bottom: 25vh;
+    font-size: 5vh;
+  }
+}
+
+
+.top-lip-shape {
+    width: 100%;
+    height: 100%;
+    background-color: var(--base-paper);
+    background-image: var(--texture);
+    background-repeat: auto;
+    background-size: var(--texture-repeat);
+    /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+    clip-path: polygon(100% 0%, 100% 55%, 50% 90%, 0% 55%, 0% 0%);;
+    /* No drop-shadow here, we use the dynamic-shadow-overlay instead */
+}
+
+.wax-seal-circle {
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    margin-left: -90px;
+    border-radius: 50%;
+    background-image: url("/assets/img/wax-gold.png");
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0 5px 10px rgba(0,0,0,0.4); */
+    z-index: 11;
+    /* FIX: Place it slightly above the paper in 3D space */
+    transform: translateZ(2px);
+    /* FIX: No independent transition needed, it rides the container */
+}
+
+/* --- OPEN STATE ANIMATIONS --- */
+
+.envelope-wrapper.open .top-lip-container {
+    /* Rotate 180deg to flip up. scaleY(0) flattens it out of view */
+    transform: rotateX(180deg) scaleY(0);
+    opacity: 0;
+}
+
+.hinge-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent);
+    opacity: 1;
+    z-index: 8;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.envelope-wrapper.open .hinge-shadow {
+    opacity: 0;
+}
+
+/* The shadow fades out as the flap lifts */
+.envelope-wrapper.open .dynamic-shadow-overlay {
+    opacity: 0;
+    transition-duration: 0.8s; /* Fades faster than the flap moves */
+}
+
+.envelope-wrapper.open .envelope-main-body {
+    /* transform: translateY(105vh); */
+    opacity: 0;
+}
+
+.envelope-wrapper.open .invitation-text {
+    opacity: 0;
+}
+
+
+
+/* Shadow Animation: Grow and Fade */
+.envelope-wrapper.open .shadow {
+    height: 100%; /* Grow to 100% height */
+    /* opacity: 0;   Fade out */
+    /* We stretch it downwards slightly to simulate the shadow moving away */
+    transform: scaleY(1.2) translateY(20px);
+}

@@ -27,3 +27,16 @@
   font-weight: 500;
   font-style: normal;
 }
+
+.texturina {
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

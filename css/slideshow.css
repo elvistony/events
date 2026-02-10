@@ -1,0 +1,6 @@
+.slideshow{
+    position: fixed;
+    bottom: 5%;
+    right: 10%;
+    z-index: 11;
+}

@@ -1,3 +1,17 @@
+/* Fade-in animation for masthead text */
+.fade-object {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+.fade-object.visible {
+  opacity: 1;
+}
+
+#mainNav{
+  background-color: transparent !important;
+  
+}
+
 :root {
   /* Couple Colors */
   --sage-green: rgb(124, 154, 124);
@@ -9,18 +23,31 @@
   --pastel-rose: #f5e8ed;
   --pastel-gold: #faf0e6;
   --pastel-lavender: #f0e8f5;
+
+  --theme-burgundy: #800020;
+  --theme-blush: #e48b8b;
+  --theme-forest-green: #135013;
+  --theme-ivory: #FFFFF0;
   
   /* Dark/Strong Versions for Buttons & Accents */
   --dark-sage: rgb(104, 134, 104);
   --dark-mauve: rgb(138, 66, 78);
 }
 
+.pastel-cream{
+  background-color: var(--pastel-cream);
+}
+
+.burgundy{
+  background-color: var(--theme-burgundy);
+}
+
 /* Override Bootstrap primary colors */
-.btn-primary,
+/* .btn-primary,
 .page-section.bg-primary {
   background-color: var(--sage-green) !important;
   border-color: var(--sage-green) !important;
-}
+} */
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -50,11 +77,11 @@ a.text-primary:hover {
 
 /* Light/Accent Sections */
 .page-section.bg-light {
-  background-color: var(--pastel-cream) !important;
+  background-color: white !important;
 }
 
 .page-section:not(.bg-primary):not(.bg-light):not(.bg-dark) {
-  background-color: var(--pastel-lavender) !important;
+  background-color: white !important;
 }
 
 #about {
@@ -70,46 +97,50 @@ a.text-primary:hover {
   background-color: var(--pastel-cream) !important;
 }
 
-#event-madhuram,
+/* #event-madhuram,
 #event-reception {
   background-color: var(--pastel-cream) !important;
-}
+} */
 
 #event-madhuram h2,
 #event-madhuram h5,
 #event-reception h2,
 #event-reception h5 {
-  color: var(--mauve);
+  color: var(--theme-burgundy);
 }
 
-#event-wedding {
+/* #event-wedding {
   background-color: var(--pastel-cream) !important;
-}
+} */
 
-#event-wedding h2,
+/* #event-wedding h2,
 #event-wedding h5 {
   color: var(--sage-green);
-}
+} */
 
 /* Bible Quote Banners */
 #quote-1,
 #quote-3 {
-  background-color: var(--mauve) !important;
+  background-color: var(--theme-burgundy) !important;
+  font-family: "Texturina", serif;
   /* border-top: 3px solid var(--sage-green);
   border-bottom: 3px solid var(--sage-green); */
 }
 
 #quote-2,
 #quote-4 {
-  background-color: var(--sage-green) !important;
+  background-color: var(--theme-forest-green) !important;
+  font-family: "Texturina", serif;
   /* border-top: 3px solid var(--sage-green);
   border-bottom: 3px solid var(--sage-green); */
 }
 
 #quote-1 h4,
 #quote-2 h4,
-#quote-3 h4 {
+#quote-3 h4,
+#quote-4 h4 {
   color: white !important;
+  
 }
 
 /* Link Colors */
@@ -213,7 +244,7 @@ a:hover {
 }
 
 .name-last{
-    padding-top: 60px;
+    padding-top: 70px;
     margin-left: -40px;
 }
 
@@ -222,12 +253,12 @@ a:hover {
   position: relative;
   z-index: 2;
   font-size: inherit;
-  text-shadow: 2px 1px 3px darkslategray;
+  /* text-shadow: 2px 1px 3px darkslategray; */
   /* padding-bottom: 20px; */
 }
 
 .and-wrapper {
-    font-family: 'Merriweather';
+    /* font-family: 'Merriweather'; */
   position: relative;
   width: 100%;
   height: 100%;
@@ -243,7 +274,7 @@ a:hover {
   position: absolute;
   font-size: 2.5rem;
   font-weight: 200;
-  color: rgb(69, 64, 65);
+  color: rgb(174 132 0);
   opacity: 0.7;
   /* transform: rotate(-15deg) translateY(-10px); */
   white-space: nowrap;
@@ -254,9 +285,9 @@ a:hover {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .masthead h1 {
-    font-size: 6vh !important;
+    font-size: 8vh !important;
     gap: 1rem;
     
   }
@@ -275,10 +306,10 @@ a:hover {
         margin-right: -10px;
     }
 
-    .name-last{
-        padding-top: 30px;
-        margin-left: -20px;
-    }
+  .name-last{
+      padding-top: 56px;
+      margin-left: -20px;
+  }
 
 }
 
@@ -314,8 +345,9 @@ background-attachment: scroll;
     background: rgba(255, 255, 255, 0.15);
     padding: 30px 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) contrast(0.5);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    transition:  0.5s ease;
 }
 
 .countdown-item {
@@ -328,59 +360,22 @@ background-attachment: scroll;
 .countdown-value {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #807f7f;
+    color: var(--theme-ivory);
     font-family: 'Merriweather Sans', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-label {
     font-size: 0.9rem;
-    color: #424141;
+    color: var(--theme-ivory);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 8px;
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .countdown-container {
-        gap: 15px;
-        padding: 20px 10px;
-    }
-    
-    .countdown-item {
-        min-width: 60px;
-    }
-    
-    .countdown-value {
-        font-size: 1.8rem;
-    }
-    
-    .countdown-label {
-        font-size: 0.75rem;
-    }
-}
 
-@media (max-width: 576px) {
-    .countdown-container {
-        gap: 10px;
-        padding: 15px 8px;
-    }
-    
-    .countdown-item {
-        min-width: 50px;
-    }
-    
-    .countdown-value {
-        font-size: 1.3rem;
-    }
-    
-    .countdown-label {
-        font-size: 0.65rem;
-    }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 748px) {
     .countdown-container {
         gap: 8px;
         padding: 12px 5px;
@@ -397,6 +392,11 @@ background-attachment: scroll;
     .countdown-label {
         font-size: 0.55rem;
     }
+
+    .full-height{
+      height: 80vh;
+      align-content: center;
+    }
 }
 
 /* Event Section Styles */
@@ -408,6 +408,7 @@ background-attachment: scroll;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(158, 86, 98, 0.15);
     margin-bottom: 20px;
+    filter: saturate(0.5);
     border: 2px solid var(--sage-green);
 }
 
@@ -442,9 +443,7 @@ background-attachment: scroll;
 }
 
 /* UAE Reception styling - matches Madhuram pattern */
-#event-reception-uae {
-    background-color: var(--pastel-cream) !important;
-}
+
 
 #event-reception-uae h2,
 #event-reception-uae h5 {
@@ -452,9 +451,6 @@ background-attachment: scroll;
 }
 
 /* Thrissur Reception styling - matches Wedding pattern */
-#event-reception-thrissur {
-    background-color: var(--pastel-cream) !important;
-}
 
 #event-reception-thrissur h2,
 #event-reception-thrissur h5 {
@@ -529,13 +525,13 @@ background-attachment: scroll;
 }
 
 .color-circle {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     border: 3px solid transparent;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1)
 }
 
 .color-circle:hover {
@@ -590,5 +586,49 @@ background-attachment: scroll;
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
     }
+
+    .banner-flowers-top, .banner-flowers-bottom {
+      height: 100px !important;
+      background-size: auto 100px !important;
+    }
+
+    .event-map-container {
+      width: 100%;
+      height: 150px;
+  }
 }
 
+/* Flower Banner Styles */
+.banner-flowers-top {
+    width: 100%;
+    height: 120px;
+    background-color: var(--pastel-cream);
+    /* background-image: url('/assets/img/banner-flowers-t.png'); */
+    background-image: url("/assets/img/border-b.jpg");
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-size: auto 120px;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-flowers-bottom {
+    width: 100%;
+    height: 200px;
+    background-color: var(--pastel-cream);
+    /* background-image: url('/assets/img/banner-flowers-b.png'); */
+    background-image: url("/assets/img/border-t.jpg");
+
+    background-position: center bottom;
+    background-size: auto 200px;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page-section{
+  padding: 3rem 0;
+}
