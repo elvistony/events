@@ -17,6 +17,7 @@ function loadEnvelope(){
         if(document.getElementById('waxstart').dataset.clicked=="true"){
             return;
         }
+        requestWakeLock();
         const fadeEls = document.querySelectorAll('.fade-object');
         document.getElementById('waxstart').dataset.clicked = true;
         setTimeout(()=>{
@@ -33,7 +34,8 @@ function loadEnvelope(){
                 el.classList.add('visible');
             }, 400 + i * 200);
         });
-        togglePlay()
+        
+        togglePlay();
             },2500);
         },100);
     })

@@ -51,6 +51,8 @@
     height: 100vh;
     cursor: pointer;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1800px;
 }
 
 /* --- THE BACKGROUND REVEAL CARD --- */
@@ -89,6 +91,7 @@
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
     transition: opacity 2s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .flap {
@@ -148,8 +151,12 @@
     transition:
         transform var(--speed) cubic-bezier(0.5, 0, 0.2, 1),
         opacity 0.5s ease var(--speed);
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     /* Crucial: hides the back so it doesn't look upside down at the end */
+    /* Force 3D hardware acceleration in Safari */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
 }
 
@@ -224,7 +231,7 @@
     background-size: cover;
     background-position: center;
     /* box-shadow: 0 5px 10px rgba(0,0,0,0.4); */
-    z-index: 11;
+    z-index: 12;
     /* FIX: Place it slightly above the paper in 3D space */
     transform: translateZ(2px);
     /* FIX: No independent transition needed, it rides the container */
@@ -234,7 +241,8 @@
 
 .envelope-wrapper.open .top-lip-container {
     /* Rotate 180deg to flip up. scaleY(0) flattens it out of view */
-    transform: rotateX(180deg) scaleY(0);
+    -webkit-transform: rotateX(120deg);
+    transform: rotateX(120deg);
     opacity: 0;
 }
 

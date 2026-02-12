@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -12,92 +12,94 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="/css/loader.css" />
         <link href="css/styles.css" rel="stylesheet" />
 
         <!-- Custom Font -->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
         <!-- SimpleLightbox plugin CSS-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Great+Vibes&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Great+Vibes&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=WindSong:wght@400;500&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/envelope.css">
-        <link rel="stylesheet" href="css/scratch.css">
-        <link rel="stylesheet" href="css/scrollbars.css">
-        <link rel="stylesheet" href="css/shine.css">
-        <link rel="stylesheet" href="css/fab.css">
-        <link rel="stylesheet" href="css/slideshow.css">
-        <link rel="stylesheet" href="css/translations.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/envelope.css" />
+        <link rel="stylesheet" href="css/scratch.css" />
+        <link rel="stylesheet" href="css/scrollbars.css" />
+        <link rel="stylesheet" href="css/shine.css" />
+        <link rel="stylesheet" href="css/fab.css" />
+        <link rel="stylesheet" href="css/slideshow.css" />
+        <link rel="stylesheet" href="css/translations.css" />
     </head>
     <body id="page-top" data-lang="en">
         <!-- Scroll Progress Bar -->
-        <!-- <div id="section-progress-bar" class="section-progress-bar">
-            <button class="section-arrow section-arrow-up" title="Previous section"><i class="bi bi-chevron-up"></i></button>
-            <div class="section-bar-track">
-                <div class="section-bar-flower">
-                    <img src="assets/img/flower.png" alt="flower" class="flower-icon" />
+        <div class="overlay">
+            <div class="cssload-main">
+                <div class="cssload-heart">
+                    <span class="cssload-heartL"></span>
+                    <span class="cssload-heartR"></span>
+                    <span class="cssload-square"></span>
                 </div>
+                <div class="cssload-shadow"></div>
             </div>
-            <button class="section-arrow section-arrow-down" title="Next section"><i class="bi bi-chevron-down"></i></button>
-        </div> -->
+            <div class="w-100 text-center mt-5 pt-5">
+                <h6 id="overlayText windsong-regular">LOADING INVITE!</h6>
+            </div>
+        </div>
 
         <div class="envelope-container">
-        <div class="envelope-wrapper" onclick="">
-        
-        <div class="top-lip-container shadow">
-            <div class="top-lip-shape"></div>
-            <div class="wax-seal-circle"></div>
-        </div>
+            <div class="envelope-wrapper" onclick="">
+                <div class="top-lip-container shadow">
+                    <div class="top-lip-shape"></div>
+                    <div class="wax-seal-circle"></div>
+                </div>
 
-        <div class="top-lip-container" style="display: block;">
-            <div class="top-lip-shape"></div>
-            <div class="wax-seal-circle" data-clicked=false id="waxstart"></div>
-        </div>
+                <div class="top-lip-container" style="display: block">
+                    <div class="top-lip-shape"></div>
+                    <div class="wax-seal-circle" data-clicked="false" id="waxstart"></div>
+                </div>
 
-        <div class="hinge-shadow"></div>
+                <div class="hinge-shadow"></div>
 
-        <div class="envelope-main-body" style="display: block;">
-            <div class="flap flap-left"></div>
-            <div class="flap flap-right"></div>
-            <div class="shad">
-                <div class="flap flap-bottom"></div>
+                <div class="envelope-main-body" style="display: block">
+                    <div class="flap flap-left"></div>
+                    <div class="flap flap-right"></div>
+                    <div class="shad">
+                        <div class="flap flap-bottom"></div>
+                    </div>
+                    <div class="flap flap-bottom"></div>
+
+                    <div class="invitation-text">
+                        <span class="effect-shine" data-content-id="invite-subtext">An invitation just for you!</span>
+                    </div>
+                </div>
             </div>
-            <div class="flap flap-bottom"></div>
-
-            <div class="invitation-text">
-                <span class="effect-shine" data-content-id="invite-subtext">An invitation just for you!</span>
-            </div>
         </div>
-        
-    </div>
-    </div>
 
-        
         <!-- Masthead-->
         <header class="page-section masthead" id="wedding">
             <video muted playsinline class="masthead-video" poster="https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg" loop>
-                <source src="/assets/media/large.mp4" type="video/mp4">
-                
+                <source src="/assets/media/large.mp4" type="video/mp4" />
+
                 Your browser does not support the video tag.
             </video>
             <div class="masthead-overlay"></div>
             <div class="container px-4 px-lg-5 h-100 position-relative">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="font-weight-bold mea-culpa-regular heading-main" style="text-shadow: 1px 1px 2px;">
-                            <span class="name-first fade-object" data-content-id="groom-name" style="color: var(--theme-burgundy)">Elvis</span>
+                        <h1 class="font-weight-bold mea-culpa-regular heading-main" style="text-shadow: 1px 1px 2px">
+                            <span class="name-first fade-object" data-content-id="groom-name">Elvis</span>
                             <span class="and-wrapper fade-object">
                                 <span class="and">&</span>
                             </span>
-                            <span class="name-last fade-object" data-content-id="bride-name" style="color: var(--theme-burgundy)">Maritta</span>
+                            <span class="name-last fade-object" data-content-id="bride-name">Maritta</span>
                         </h1>
                         <!-- <hr class="divider fade-object" /> -->
                         <!-- <h5 class="text-muted py-3 fade-object">23.07.2026</h5> -->
@@ -144,66 +146,66 @@
             </div>
         </section> -->
         <!-- Services-->
-        
+
         <!-- <div class="banner-flowers-top"> </div> -->
 
-        <section class="page-section" style="background-color: white !important;">
-                        <h2 class="text-center mb-5 great-vibes-regular" style="color: var(--theme-burgundy);" data-content-id="date-hint">Caress the roses to find out the date!</h2>
-                        <div class="container">
-                            <div class="row justify-content-center g-4">
-                                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                                    <div class="scratch-card">
-                                        <div class="scratch-card-cover-container">
-                                            <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
-                                            <!-- only needed for Safari and iOS browsers -->
-                                            <img class="scratch-card-canvas-render hidden" alt="">
-                                            <div class="scratch-card-cover shine"></div>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
-                                            <h1 class="card-text m-0 texturina">23</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                                    <div class="scratch-card">
-                                        <div class="scratch-card-cover-container">
-                                            <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
-                                            <!-- only needed for Safari and iOS browsers -->
-                                            <img class="scratch-card-canvas-render hidden" alt="">
-                                            <div class="scratch-card-cover shine"></div>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
-                                            <h1 class="card-text m-0 texturina">07</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                                    <div class="scratch-card">
-                                        <div class="scratch-card-cover-container">
-                                            <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
-                                            <!-- only needed for Safari and iOS browsers -->
-                                            <img class="scratch-card-canvas-render hidden" alt="">
-                                            <div class="scratch-card-cover shine"></div>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
-                                            <h1 class="card-text m-0 texturina">2026</h1>
-                                        </div>
-                                    </div>
-                                </div>
+        <section class="page-section" style="background-color: white !important">
+            <h2 class="text-center mb-5 great-vibes-regular" style="color: var(--theme-burgundy)" data-content-id="date-hint">Caress the roses to find out the date!</h2>
+            <div class="container">
+                <div class="row justify-content-center g-4">
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="scratch-card">
+                            <div class="scratch-card-cover-container">
+                                <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
+                                <!-- only needed for Safari and iOS browsers -->
+                                <img class="scratch-card-canvas-render hidden" alt="" />
+                                <div class="scratch-card-cover shine"></div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                                <h1 class="card-text m-0 texturina">23</h1>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="scratch-card">
+                            <div class="scratch-card-cover-container">
+                                <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
+                                <!-- only needed for Safari and iOS browsers -->
+                                <img class="scratch-card-canvas-render hidden" alt="" />
+                                <div class="scratch-card-cover shine"></div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                                <h1 class="card-text m-0 texturina">July</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="scratch-card">
+                            <div class="scratch-card-cover-container">
+                                <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
+                                <!-- only needed for Safari and iOS browsers -->
+                                <img class="scratch-card-canvas-render hidden" alt="" />
+                                <div class="scratch-card-cover shine"></div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                                <h1 class="card-text m-0 texturina">2026</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Bible Quote Banner 1 -->
         <section class="page-section bg-primary text-white text-center py-5 full-height" id="quote-1">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem;" data-content-id="bible-quote-1">
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-1">
                     "Many waters cannot quench love; rivers cannot sweep it away. If one were to give all the wealth of one's house for love, it would be utterly scorned."
                 </h4>
                 <p class="mt-3 text-white-75" data-content-id="bible-verse-1">— Song of Songs Chapter 8 Verse 7</p>
             </div>
         </section>
-        <div class="banner-flowers-bottom"> </div>
+        <div class="banner-flowers-bottom"></div>
 
         <!-- Event 1: Madhuram Veppu -->
         <section class="page-section" id="event-madhuram" data-dwelltime="15">
@@ -211,17 +213,26 @@
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
                         <div class="event-map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <h2 class="mt-0 great-vibes-regular" data-content-id="event-1-title">Madhuram Veppu</h2>
                         <h5 class="text-primary mb-3" data-content-id="event-2-subtitle" data-content-id="event-1-subtitle">Pre-Wedding Celebration</h5>
-                        <p class="text-muted mb-4" data-content-id="event-1-desc">Join us for the traditional Madhuram Veppu ceremony, a beautiful pre-wedding celebration filled with joy, family, and cherished traditions. This intimate gathering will be a time of blessings and preparation as we count down to our special day.</p>
+                        <p class="text-muted mb-4" data-content-id="event-1-desc">
+                            Join us for the traditional Madhuram Veppu ceremony, a beautiful pre-wedding celebration filled with joy, family, and cherished traditions. This
+                            intimate gathering will be a time of blessings and preparation as we count down to our special day.
+                        </p>
                         <p class="text-muted">
-                            <strong>Date & Time:</strong><br>
-                            <span>22 <sup>nd</sup> July 2026 <br><br></span>
-                            <strong>Location:</strong><br>
+                            <strong>Date & Time:</strong><br />
+                            <span>22 <sup>nd</sup> July 2026 <br /><br /></span>
+                            <strong>Location:</strong><br />
                             <span data-content-id="event-1-venue">[Venue Name & Address]</span>
                         </p>
                         <div class="event-calendar-buttons mt-4">
@@ -232,11 +243,11 @@
                         <div class="event-color-palette mt-4">
                             <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                             <div class="color-circles">
-                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                <div class="color-circle" style="background-color: #ffb6c1" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
                             </div>
                         </div>
                     </div>
@@ -247,20 +258,18 @@
         <!-- Bible Quote Banner 2 -->
         <section class="page-section text-white text-center py-5 bg-primary full-height" data-dwelltime="5" id="quote-2">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem;" data-content-id="bible-quote-2">
-                    "Therefore what God has joined together, let no one separate."
-                </h4>
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-2">"Therefore what God has joined together, let no one separate."</h4>
                 <p class="mt-3 text-white-75" data-content-id="bible-verse-2">— Mark 10:9</p>
             </div>
         </section>
-        <div class="banner-flowers-bottom"> </div>
+        <div class="banner-flowers-bottom"></div>
 
         <!-- Event 2: Wedding -->
         <section class="page-section pastel-cream" id="event-wedding" data-dwelltime="15">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-lg-6">
-                        <img src="/assets/img/rak-wedding.png" style="filter: brightness(1.1);" class="w-100 mb-4" alt="">
+                        <img src="/assets/img/rak-wedding.png" style="filter: brightness(1.1)" class="w-100 mb-4" alt="" />
                         <!-- <div class="event-map-container">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div> -->
@@ -268,11 +277,14 @@
                     <div class="col-lg-6">
                         <h2 class="mt-0 great-vibes-regular" data-content-id="event-2-title" data-content-id="event-2-title">Our Wedding Ceremony</h2>
                         <h5 class="text-primary mb-3" data-content-id="event-2-subtitle" data-content-id="event-2-subtitle">The Main Event</h5>
-                        <p class="text-muted mb-4" data-content-id="event-2-desc">We joyfully invite you to celebrate our wedding as we make our vows before God and our loved ones. This sacred moment marks the beginning of our journey together as husband and wife, and we would be honored to have you share in this blessing.</p>
+                        <p class="text-muted mb-4" data-content-id="event-2-desc">
+                            We joyfully invite you to celebrate our wedding as we make our vows before God and our loved ones. This sacred moment marks the beginning of our journey
+                            together as husband and wife, and we would be honored to have you share in this blessing.
+                        </p>
                         <p class="text-muted">
-                            <strong>Date & Time:</strong><br>
-                            23 <sup>rd</sup> July 2026 <br><br>
-                            <strong>Location:</strong><br>
+                            <strong>Date & Time:</strong><br />
+                            23 <sup>rd</sup> July 2026 <br /><br />
+                            <strong>Location:</strong><br />
                             <span data-content-id="event-2-venue">St. Anthony of Padua RC Church, Ras Al Khaimah, UAE</span>
                         </p>
                         <div class="event-calendar-buttons mt-4">
@@ -283,11 +295,11 @@
                         <div class="event-color-palette mt-4">
                             <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                             <div class="color-circles">
-                                <div class="color-circle" style="background-color: var(--theme-burgundy);" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                <div class="color-circle" style="background-color: var(--theme-burgundy)" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
                             </div>
                         </div>
                     </div>
@@ -298,13 +310,13 @@
         <!-- Bible Quote Banner 3 -->
         <section class="page-section bg-primary text-white text-center py-5 full-height" data-dwelltime="5" id="quote-3">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem;" data-content-id="bible-quote-3">
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-3">
                     "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
                 </h4>
                 <p class="mt-3 text-white-75" data-content-id="bible-verse-3">— 1 Corinthians 13:4</p>
             </div>
         </section>
-        <div class="banner-flowers-bottom"> </div>
+        <div class="banner-flowers-bottom"></div>
 
         <!-- Event 3: Ajman Reception -->
         <section class="page-section" id="event-reception-uae" data-dwelltime="15">
@@ -312,17 +324,26 @@
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
                         <div class="event-map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <h2 class="mt-0 great-vibes-regular" data-content-id="event-3-title">Ajman Reception</h2>
                         <h5 class="text-primary mb-3" data-content-id="event-3-subtitle">Celebration in the Emirates</h5>
-                        <p class="text-muted mb-4" data-content-id="event-3-desc">Join us for an evening of celebration, delicious food, and joyful dancing as we kick off our new life together. Your presence and blessings mean the world to us, and we look forward to creating wonderful memories with all those we love.</p>
+                        <p class="text-muted mb-4" data-content-id="event-3-desc">
+                            Join us for an evening of celebration, delicious food, and joyful dancing as we kick off our new life together. Your presence and blessings mean the
+                            world to us, and we look forward to creating wonderful memories with all those we love.
+                        </p>
                         <p class="text-muted">
-                            <strong>Date & Time:</strong><br>
-                            24 <sup>th</sup> July 2026 <br><br>
-                            <strong>Location:</strong><br>
+                            <strong>Date & Time:</strong><br />
+                            24 <sup>th</sup> July 2026 <br /><br />
+                            <strong>Location:</strong><br />
                             <span></span>
                         </p>
                         <div class="event-calendar-buttons mt-4">
@@ -333,11 +354,11 @@
                         <div class="event-color-palette mt-4">
                             <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                             <div class="color-circles">
-                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                <div class="color-circle" style="background-color: #ffb6c1" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
                             </div>
                         </div>
                     </div>
@@ -348,13 +369,11 @@
         <!-- Bible Quote Banner 4 -->
         <section class="page-section text-white bg-primary text-center py-5 full-height" data-dwelltime="5" id="quote-4">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem;" data-content-id="bible-quote-4">
-                    "Rejoice in the Lord always. I will say it again: Rejoice!"
-                </h4>
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-4">"Rejoice in the Lord always. I will say it again: Rejoice!"</h4>
                 <p class="mt-3 text-white-75" data-content-id="bible-verse-4">— Philippians 4:4</p>
             </div>
         </section>
-        <div class="banner-flowers-bottom"> </div>
+        <div class="banner-flowers-bottom"></div>
 
         <!-- Event 4: Thrissur Reception -->
         <section class="page-section" id="event-reception-thrissur" data-dwelltime="15">
@@ -364,16 +383,19 @@
                         <!-- <div class="event-map-container">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15687.554950497257!2d76.20213249275925!3d10.587871401643813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e92bb38608df%3A0x2a4f06ff16e46ffe!2sThiroor%2C%20Thrissur%2C%20Kerala%2C%20India!5e0!3m2!1sen!2suk!4v1770159845168!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div> -->
-                        <img src="/assets/img/santhome-square.png" style="filter: brightness(1.05);" class="w-100 mb-4" alt="">
+                        <img src="/assets/img/santhome-square.png" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
                     </div>
                     <div class="col-lg-6">
                         <h2 class="mt-0 great-vibes-regular" data-content-id="event-4-title">Thiroor Reception</h2>
                         <h5 class="text-primary mb-3" data-content-id="event-4-subtitle">Homecoming Celebration</h5>
-                        <p class="text-muted mb-4" data-content-id="event-4-desc">Join us for a joyous homecoming reception with family and friends from our beloved Thrissur. This celebration brings together our roots and loved ones as we share in the joy of our union and create cherished memories in our home state.</p>
+                        <p class="text-muted mb-4" data-content-id="event-4-desc">
+                            Join us for a joyous homecoming reception with family and friends from our beloved Thrissur. This celebration brings together our roots and loved ones
+                            as we share in the joy of our union and create cherished memories in our home state.
+                        </p>
                         <p class="text-muted">
-                            <strong>Date & Time:</strong><br>
-                            1 <sup>st</sup> August 2026 <br><br>
-                            <strong>Location:</strong><br>
+                            <strong>Date & Time:</strong><br />
+                            1 <sup>st</sup> August 2026 <br /><br />
+                            <strong>Location:</strong><br />
                             <span data-content-id="event-4-venue">Santhome Square, Thiroor, Thrissur</span>
                         </p>
                         <div class="event-calendar-buttons mt-4">
@@ -384,11 +406,11 @@
                         <div class="event-color-palette mt-4">
                             <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                             <div class="color-circles">
-                                <div class="color-circle" style="background-color: #FFB6C1;" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                <div class="color-circle" style="background-color: #DDA0DD;" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                <div class="color-circle" style="background-color: #FFE4B5;" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                <div class="color-circle" style="background-color: #F0E68C;" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                <div class="color-circle" style="background-color: #B0E0E6;" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                <div class="color-circle" style="background-color: #ffb6c1" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
+                                <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
+                                <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
+                                <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
+                                <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
                             </div>
                         </div>
                     </div>
@@ -397,69 +419,7 @@
         </section>
 
         <!-- Portfolio-->
-        <!-- <div id="portfolio">
-            <div class="container-fluid p-0" style="background-color: var(--pastel-cream) !important;">
-                <h2 class="text-center pt-5">Community Album</h2>
-                <hr class="divider" />
-                <p class="text-center mb-5">Contribute to the Community Album to help us cherish the moment!</p>
-                <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="https://images.pexels.com/photos/13152507/pexels-photo-13152507.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+
         <!-- Call to action -->
         <section class="page-section bg-dark text-white full-height" data-dwelltime="5">
             <div class="container px-2 px-lg-1 text-center">
@@ -471,89 +431,85 @@
         <footer class="py-5 full-height page-section" data-dwelltime="5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted pt-5">Made by Elvis with 💖 for Maritta</div></div>
             <div class="w-100 text-center">
-                <img src="https://img.freepik.com/premium-vector/elegant-watercolor-burgundy-flowers-floral-illustration_1310786-18885.jpg?w=2000" style="height: 100px;" alt="">
+                <img src="/assets/img/rose-center-piece.png" style="height: 100px" alt="" />
             </div>
             <div class="w-100 text-center">
-                <button type="button" class="btn btn-sm pastel-cream" onclick="window.scrollTo({top: 0,behavior: 'smooth'});"> Scroll up</button>
+                <button type="button" class="btn btn-sm pastel-cream" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Scroll up</button>
             </div>
         </footer>
-        
-        <div class="banner-flowers-top"> </div>
-        
+
+        <div class="banner-flowers-top"></div>
+
         <!-- Color Overlay -->
         <div id="colorOverlay" class="color-overlay">
-            <button class="btn btn-light btn-lg return-btn" onclick="hideColorOverlay()">
-                Click to Return to Events
-            </button>
+            <button class="btn btn-light btn-lg return-btn" onclick="hideColorOverlay()">Click to Return to Events</button>
         </div>
 
-        <audio id="bgm" preload="auto" onloadeddata="this.currentTime=54.8;" src="/assets/media/raye.m4a" loop hidden></audio>
-        
-    <div class="fab-wrapper">
-        <button class="btn-fab btn-play" onclick="togglePlay()">
-            <i class="fa fa-play" id="playIcon"></i>
-        </button>
+        <audio id="bgm" preload="auto" onloadeddata="this.currentTime = 41.8" src="/assets/media/olivia.m4a" loop hidden></audio>
 
-        <button class="btn-fab btn-play" onclick="toggleSound()">
-            <i class="fa fa-volume-up" id="playSound"></i>
-        </button>
-
-        <div class="position-relative">
-            <div id="drawer" class="fab-drawer">
-                <a href="javascript:void(0)" class="drawer-item" onclick="openLangModal()">
-                    <i class="fa fa-globe"></i> 
-                    <span>Languages</span>
-                    <span id="currentLangDisplay" class="lang-label">English</span>
-                </a>
-                <a href="javascript:void(0)" class="drawer-item" onclick="shareLink()">
-                    <i class="fa fa-share-alt"></i> Share
-                </a>
-            </div>
-            
-            <button class="btn-fab btn-menu" onclick="toggleDrawer()">
-                <i class="fa fa-bars" id="menuIcon"></i>
+        <div class="fab-wrapper">
+            <button class="btn-fab btn-play" onclick="togglePlay()">
+                <i class="fa fa-play" id="playIcon"></i>
             </button>
-        </div>
 
-        
-    </div>
+            <button class="btn-fab btn-play" onclick="toggleSound()">
+                <i class="fa fa-volume-up" id="playSound"></i>
+            </button>
 
-    <div class="modal fade" id="langModal" tabindex="-1" role="dialog" aria-label="modal">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-muted">Select Language</h5>
-                    <button type="button" class="close text-white btn btn-sm btn-danger" data-dismiss="modal">&times;</button>
+            <div class="position-relative">
+                <div id="drawer" class="fab-drawer">
+                    <a href="javascript:void(0)" class="drawer-item" onclick="openLangModal()">
+                        <i class="fa fa-globe"></i>
+                        <span>Languages</span>
+                        <span id="currentLangDisplay" class="lang-label">English</span>
+                    </a>
+                    <a href="javascript:void(0)" class="drawer-item" onclick="shareLink()"> <i class="fa fa-share-alt"></i> Share </a>
                 </div>
-                <div class="modal-body">
-                    <div class="lang-option" onclick="setLanguage('en', 'English')">English</div>
-                    <div class="lang-option" onclick="setLanguage('ar', 'Arabic')">العربية (Arabic)</div>
-                    <div class="lang-option" onclick="setLanguage('hi', 'Hindi')">हिन्दी (Hindi)</div>
-                    <div class="lang-option" onclick="setLanguage('ml', 'Malayalam')">മലയാളം (Malayalam)</div>
+
+                <button class="btn-fab btn-menu" onclick="toggleDrawer()">
+                    <i class="fa fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="langModal" tabindex="-1" role="dialog" aria-label="modal">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-muted">Select Language</h5>
+                        <button type="button" class="close text-white btn btn-sm btn-danger" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="lang-option" onclick="setLanguage('en', 'English')">English</div>
+                        <div class="lang-option" onclick="setLanguage('ar', 'Arabic')">العربية (Arabic)</div>
+                        <div class="lang-option" onclick="setLanguage('hi', 'Hindi')">हिन्दी (Hindi)</div>
+                        <div class="lang-option" onclick="setLanguage('ml', 'Malayalam')">മലയാളം (Malayalam)</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-        
+
         <!-- Bootstrap core JS-->
-         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
-         
+
         <script src="js/scripts.js"></script>
+        <script src="/js/loader.js"></script>
+        <script src="/js/wakelock.js"></script>
         <!-- Page Alter based on guest tier -->
-         <script src="/js/envelope.js"></script>
+        <script src="/js/envelope.js"></script>
         <script src="js/page-url.js"></script>
-        
+
         <script src="/js/scratch.js"></script>
         <!-- FAB Module -->
         <script src="/js/fab.js"></script>
         <script src="/js/slideshow.js"></script>
         <script src="/js/translations.js"></script>
-        <!-- <script src="/js/scrollbars.js"></script> -->
 
+        <!-- <script src="/js/scrollbars.js"></script> -->
     </body>
 </html>

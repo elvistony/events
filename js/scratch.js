@@ -11,7 +11,7 @@ const SCRATCH_IMAGE = "/assets/rose.png";
 const SCRATCH_IMAGE_SCALE = { scale: 0.4 }; // or { scale: 0.8 } or { width: 200, height: 100 }
 
 class ScratchCard {
-  constructor (cardElement) {
+  constructor(cardElement) {
   this.cardElement = cardElement;
   this.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   this.cover = cardElement.querySelector('.scratch-card-cover');
@@ -22,16 +22,12 @@ class ScratchCard {
   this.canvas = cardElement.querySelector('canvas');
   this.context = this.canvas.getContext('2d');
   
-  // 1. Handle High DPI (Retina) scaling
   this.devicePixelRatio = window.devicePixelRatio || 1;
   this.canvasWidth = this.canvas.offsetWidth;
   this.canvasHeight = this.canvas.offsetHeight;
   
-  // Set the internal resolution (drawing surface)
   this.canvas.width = this.canvasWidth * this.devicePixelRatio;
   this.canvas.height = this.canvasHeight * this.devicePixelRatio;
-  
-  // Scale the context so drawing commands use CSS pixel coordinates
   this.context.scale(this.devicePixelRatio, this.devicePixelRatio);
   
   this.positionX = null;
@@ -41,6 +37,8 @@ class ScratchCard {
 
   if (this.isSafari) {
     this.canvas.classList.add('hidden');
+    // Ensure the render image is visible but starts with the right size
+    if (this.canvasRender) this.canvasRender.classList.remove('hidden');
   }
 
   if (SCRATCH_TRANSPARENT) {
@@ -50,14 +48,20 @@ class ScratchCard {
     const goldImg = new window.Image();
     goldImg.src = SCRATCH_IMAGE;
     goldImg.onload = () => {
-      // 2. STRETCH FIX: Use the CSS dimensions to fill the context 
-      // The context.scale() handled above ensures this fills the high-res surface.
+      this.context.fillStyle = SCRATCH_COLOR;
+      this.context.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
       this.context.drawImage(goldImg, 0, 0, this.canvasWidth, this.canvasHeight);
+      
+      // CRITICAL FIX: Trigger the first render for Safari immediately
+      if (this.isSafari) {
+        this.setImageFromCanvas();
+      }
     };
 
     goldImg.onerror = () => {
       this.context.fillStyle = SCRATCH_COLOR;
       this.context.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
+      if (this.isSafari) this.setImageFromCanvas();
     };
   }
   this.initEvents();

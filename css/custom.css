@@ -140,7 +140,8 @@ a.text-primary:hover {
 #quote-3 h4,
 #quote-4 h4 {
   color: white !important;
-  
+  height: 100vh;
+  align-content: center;
 }
 
 /* Link Colors */
@@ -241,6 +242,11 @@ a:hover {
 .name-first{
     padding-bottom: 60px;
     margin-right: -40px;
+    font-family: "Mea Culpa", "mea-culpa-regular", cursive;
+    /* Safari sometimes needs a higher font-weight to trigger the correct glyphs */
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-display: swap;
 }
 
 .name-last{
@@ -252,7 +258,7 @@ a:hover {
 .name-last {
   position: relative;
   z-index: 2;
-  font-size: inherit;
+  color: var(--theme-burgundy);
   /* text-shadow: 2px 1px 3px darkslategray; */
   /* padding-bottom: 20px; */
 }
@@ -394,7 +400,7 @@ background-attachment: scroll;
     }
 
     .full-height{
-      height: 80vh;
+      /* height: 80vh; */
       align-content: center;
     }
 }

@@ -11,7 +11,7 @@
 }
 
 .card-text{
-    font-size: 8vh;
+    font-size: 5vh;
     padding-bottom: 20px;
 }
 
@@ -133,5 +133,18 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+
+/* iPads and iPhones in Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .scratch-card {
+        width: 150px !important;
     }
 }
