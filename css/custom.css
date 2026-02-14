@@ -25,7 +25,7 @@
   --pastel-lavender: #f0e8f5;
 
   --theme-burgundy: #800020;
-  --theme-blush: #e48b8b;
+  --theme-blush: #ffd8d8;
   --theme-forest-green: #135013;
   --theme-ivory: #FFFFF0;
   
@@ -38,7 +38,7 @@
   background-color: var(--pastel-cream);
 }
 
-.burgundy{
+.bg-theme{
   background-color: var(--theme-burgundy);
 }
 
@@ -80,67 +80,18 @@ a.text-primary:hover {
   background-color: white !important;
 }
 
-.page-section:not(.bg-primary):not(.bg-light):not(.bg-dark) {
-  background-color: white !important;
-}
-
-#about {
-  background-color: var(--sage-green) !important;
-}
-
-#about h2,
-#about p {
-  color: white;
-}
-
-#services {
-  background-color: var(--pastel-cream) !important;
-}
-
-/* #event-madhuram,
-#event-reception {
-  background-color: var(--pastel-cream) !important;
-} */
-
-#event-madhuram h2,
-#event-madhuram h5,
-#event-reception h2,
-#event-reception h5 {
+.text-theme{
   color: var(--theme-burgundy);
 }
 
-/* #event-wedding {
-  background-color: var(--pastel-cream) !important;
-} */
-
-/* #event-wedding h2,
-#event-wedding h5 {
-  color: var(--sage-green);
-} */
-
-/* Bible Quote Banners */
-#quote-1,
-#quote-3 {
-  background-color: var(--theme-burgundy) !important;
+.quote {
   font-family: "Texturina", serif;
-  /* border-top: 3px solid var(--sage-green);
-  border-bottom: 3px solid var(--sage-green); */
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.362);
+  backdrop-filter: blur(8px);
 }
 
-#quote-2,
-#quote-4 {
-  background-color: var(--theme-forest-green) !important;
-  font-family: "Texturina", serif;
-  /* border-top: 3px solid var(--sage-green);
-  border-bottom: 3px solid var(--sage-green); */
-}
-
-#quote-1 h4,
-#quote-2 h4,
-#quote-3 h4,
-#quote-4 h4 {
-  color: white !important;
-  height: 100vh;
+.quote > h4{
   align-content: center;
 }
 
@@ -207,8 +158,8 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px);
-  opacity: 0.5;
+  /* filter: blur(2px); */
+  opacity: 0.9;
   z-index: 0;
 }
 
@@ -280,7 +231,7 @@ a:hover {
   position: absolute;
   font-size: 2.5rem;
   font-weight: 200;
-  color: rgb(174 132 0);
+  color: var(--theme-burgundy);
   opacity: 0.7;
   /* transform: rotate(-15deg) translateY(-10px); */
   white-space: nowrap;
@@ -319,18 +270,6 @@ a:hover {
 
 }
 
-.parallax {
-/* The image used */
-
-/* Full height */
-height: 100%;
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
 
 .para-1{
     background-image: url('https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg');
@@ -348,10 +287,10 @@ background-attachment: scroll;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgb(5 5 5 / 29%);
     padding: 30px 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px) contrast(0.5);
+    backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition:  0.5s ease;
 }
@@ -546,38 +485,6 @@ background-attachment: scroll;
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Color Overlay Styles */
-.color-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.color-overlay.active {
-    display: flex;
-}
-
-.return-btn {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    border-radius: 50px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.return-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
 @media (max-width: 768px) {
     .event-calendar-buttons {
         margin-top: 1.5rem !important;
@@ -602,6 +509,10 @@ background-attachment: scroll;
       width: 100%;
       height: 150px;
   }
+
+  .m-full-height{
+    height: 100vh;
+  }
 }
 
 /* Flower Banner Styles */
@@ -625,8 +536,8 @@ background-attachment: scroll;
     height: 200px;
     background-color: var(--pastel-cream);
     /* background-image: url('/assets/img/banner-flowers-b.png'); */
-    background-image: url("/assets/img/border-t.jpg");
-
+    background-image: url("/assets/img/border-b.jpg");
+    transform: rotateX(180deg);
     background-position: center bottom;
     background-size: auto 200px;
     background-attachment: scroll;
@@ -636,5 +547,28 @@ background-attachment: scroll;
 }
 
 .page-section{
-  padding: 3rem 0;
+  padding: 0rem 0;
+}
+
+
+/* parallax video */
+
+.parallax-video{ 
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+}
+.parallax-video video{ 
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -999;
+}
+
+.bg-transparent{
+  background-color: transparent !important;
+}
+
+.page-section > section{
+  padding-bottom: 4rem;
 }

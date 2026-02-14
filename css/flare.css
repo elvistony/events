@@ -1,0 +1,93 @@
+/* THE CIRCULAR LENS FLARE */
+.revealio > .lens-flare {
+    position: fixed;
+    /* Large size for soft edges */
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+
+    /* Layered gradients for a "glass" look */
+    background: radial-gradient(circle at center, rgba(255, 230, 150, 0.7) 0%, rgba(255, 180, 50, 0.4) 30%, rgba(255, 100, 0, 0.2) 50%, transparent 70%);
+
+    z-index: 10000;
+    pointer-events: none;
+    filter: blur(40px);
+    opacity: 0;
+
+    /* The "Natural" Motion: Arc and Scale */
+    animation: flarePass 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+    animation-delay: 2.2s;
+}
+
+/* THE SITE REVEAL */
+.revealio > .content-bg {
+    /* position: fixed; */
+    inset: 0;
+    /* background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2071') no-repeat center center/cover; */
+    
+    /* Starts warm-dark and heavily blurred */
+    filter: blur(40px) brightness(0) sepia(0.8) saturate(2);
+    animation: organicReveal 5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 2s;
+}
+
+/* ANIMATIONS */
+@keyframes organicReveal {
+    0% {
+        filter: blur(40px) brightness(0) sepia(0.8) saturate(2);
+        transform: scale(1.08);
+    }
+    /* Fast brightness gain, slow blur disappearance */
+    40% {
+        filter: blur(25px) brightness(0.6) sepia(0.4) saturate(1.5);
+    }
+    100% {
+        filter: blur(0px) brightness(1) sepia(0) saturate(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes flarePass {
+    0% {
+        opacity: 0;
+        transform: translate(-20%, 80%) scale(0.5);
+    }
+    20% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        /* Moving in an arc across the center-right */
+        transform: translate(60%, -10%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(120%, -40%) scale(1.5);
+    }
+}
+
+/* VIGNETTE FOR DEPTH */
+/* .revealio > .vignette {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 50000;
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+    animation-delay: 2.5s;
+} */
+
+.revelio-bg{
+    height: 100vh;
+    /* width: 100vw; */
+    margin: 0px;
+    padding: 0px;
+    background: aliceblue;
+    position: fixed;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

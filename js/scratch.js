@@ -5,6 +5,7 @@ const SCRATCH_TRANSPARENT = true;
 
 // Path to the scratch image
 const SCRATCH_IMAGE = "/assets/rose.png";
+let Scratched = 0;
 
 // Optional: Set custom scaling for the scratch image (set to null to use canvas size)
 // Example: { scale: 0.8 } or { width: 200, height: 100 }
@@ -191,6 +192,7 @@ class ScratchCard {
     const fillPercentage = matchPixelCount * 100 / (this.canvasWidth * this.canvasHeight);
     if (fillPercentage >= 25) {
       this.coverContainer.classList.add('clear');
+      Scratched= Scratched+1;
       if (typeof confetti === 'function') {
         confetti({
           particleCount: 100,
@@ -205,6 +207,10 @@ class ScratchCard {
       this.coverContainer.addEventListener('transitionend', () => {
         this.coverContainer.classList.add('hidden');
       }, { once: true });
+
+      if(Scratched==3){
+        togglePlay();
+      }
     }
   }
 }

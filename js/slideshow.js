@@ -28,10 +28,10 @@ function toggleSound(){
     
     if (!isMuted) {
         playSound.className = 'fa fa-volume-up';
-        document.getElementById('bgm').volume=1
+        document.getElementById('bgm').muted=false;
     } else {
         playSound.className = 'fa fa-volume-off';
-        document.getElementById('bgm').volume=0
+        document.getElementById('bgm').muted=true
     }
 }
 

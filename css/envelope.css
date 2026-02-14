@@ -4,13 +4,17 @@
     --paper-right: 0.9;
     --paper-bottom: 1;
     --text-color: #e7a200;
-    --speed: 5s;
+    --speed: 7s;
     --texture-repeat:150vh;
     --texture: url("https://img.freepik.com/free-vector/gradient-golden-linear-background_23-2148957754.jpg");
 }
 
 /* https://www.transparenttextures.com/patterns/gray-floral.png */
 /* https://wallpaper.dog/large/20364527.jpg */
+
+html{
+    scrollbar-gutter: stable;
+}
 
 .envelope-container {
     margin: 0;
@@ -22,6 +26,7 @@
     left: 0;
     overflow: hidden;
     /* background-color: #fffdc6; */
+    transition: 2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +103,7 @@
     position: absolute;
     background-image: var(--texture);
     background-repeat: auto;
+    filter: contrast(0.3) brightness(1.5);
     background-size: var(--texture-repeat);
     pointer-events: none;
 }
@@ -108,12 +114,12 @@
     left: 0;
     width: 50%;
     height: 100%;
-    
+    filter: contrast(0.3) brightness(1.5);
     background-color: var(--base-paper);
     clip-path: polygon(0% 0%, 100% 60%, 0% 100%);
     z-index: 1;
     /* box-shadow: inset -20px 0px 60px 20px rgba(0, 0, 0, 0.8); */
-    filter: drop-shadow(4px 0 6px rgba(0, 0, 0, 0.1)) contrast(var(--paper-left));
+    filter: drop-shadow(4px 0 6px rgba(0, 0, 0, 0.1)) contrast(0.2) brightness(1.5);
 }
 .flap-right {
     top: 0;
@@ -124,7 +130,7 @@
     clip-path: polygon(100% 0%, 100% 100%, 0% 60%);
     z-index: 1;
     /* box-shadow: inset 20px 0px 60px 20px rgba(0, 0, 0, 0.8); */
-    filter: drop-shadow(-4px 0 6px rgba(0, 0, 0, 0.1)) contrast(var(--paper-right));
+    filter: drop-shadow(4px 0 6px rgba(0, 0, 0, 0.1)) contrast(0.2) brightness(1.5);
 }
 .flap-bottom {
     bottom: 0;
@@ -211,8 +217,8 @@
     height: 100%;
     background-color: var(--base-paper);
     background-image: var(--texture);
-    background-repeat: auto;
     background-size: var(--texture-repeat);
+    filter: contrast(0.3) brightness(1.5);
     /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
     clip-path: polygon(100% 0%, 100% 55%, 50% 90%, 0% 55%, 0% 0%);;
     /* No drop-shadow here, we use the dynamic-shadow-overlay instead */
@@ -226,7 +232,7 @@
     height: 180px;
     margin-left: -90px;
     border-radius: 50%;
-    background-image: url("/assets/img/wax-gold.png");
+    background-image: url("/assets/img/wax-seal-golden-burgundy.png");
     background-color: transparent;
     background-size: cover;
     background-position: center;

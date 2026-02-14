@@ -25,9 +25,16 @@ function loadEnvelope(){
             document.querySelector('.envelope-wrapper').classList.toggle('open')
             
             document.getElementById('bgm').play();
+
+            setTimeout(()=>{
+                document.querySelector('.envelope-container').style.opacity=0;
+            },1000)
+
             setTimeout(()=>{
                 document.querySelector('.envelope-container').style.display = 'none';
                 document.querySelector('body').style.overflow='auto';
+
+                document.getElementById('intro-animation').classList.add('revealio')
                 
                 fadeEls.forEach((el, i) => {
             setTimeout(() => {
