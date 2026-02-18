@@ -12,6 +12,8 @@ function loadEnvelope(){
     document.getElementById('waxstart').addEventListener('click',()=>{
         console.log("Trigger")
         document.querySelector('.masthead-video').play();
+        document.body.dataset.envelope='open';
+        AOS.init();
         
         console.log(document.getElementById('waxstart').dataset.clicked)
         if(document.getElementById('waxstart').dataset.clicked=="true"){

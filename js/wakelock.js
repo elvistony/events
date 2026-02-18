@@ -10,7 +10,7 @@ async function requestWakeLock() {
 }
 
 // Request the lock when the page loads
-requestWakeLock();
+// requestWakeLock();
 
 // Re-request if the user switches tabs and comes back
 document.addEventListener('visibilitychange', async () => {

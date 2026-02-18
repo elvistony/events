@@ -1,6 +1,6 @@
 const weddingTranslations = {
     "en": {
-        "invite-subtext": "An invitation just for you!",
+        "invite-subtext": "Tap the wax seal",
         "groom-name": "Elvis",
         "bride-name": "Maritta",
         "counter-week": "Weeks",

@@ -25,10 +25,34 @@ let eventId = ""; // Global variable for other scripts to access
 
 const allEvents = ["event-madhuram", "event-wedding", "event-reception-uae", "event-reception-thrissur"];
 
+// function hideAllEvents() {
+    
+//     allEvents.forEach(id => {
+//         const element = document.getElementById(id);
+//         // document.querySelector('.quote * > [data-content-id="bible-quote-*"]').style.display='none'
+//         if (element) element.style.display = "none";
+//     });
+// }
+
+// function showEvents(allowedEvents) {
+//     allowedEvents.forEach(id => {
+//         const element = document.getElementById(id);
+//         if (element) {
+//             element.style.display = "block";
+//             document.querySelector('.quote * > [data-content-id="bible-quote-'+(allEvents.indexOf(element)+1)+'"]').style.display='none'
+//             SHOW_INVITE = true;
+//         }
+//     });
+// }
+
 function hideAllEvents() {
-    allEvents.forEach(id => {
+    allEvents.forEach((id, index) => {
         const element = document.getElementById(id);
         if (element) element.style.display = "none";
+        
+        // Hide the corresponding quote for this ID as well
+        const quote = document.querySelectorAll(`.quote`)[index+1];
+        if (quote) quote.style.display = "none";
     });
 }
 
@@ -37,7 +61,14 @@ function showEvents(allowedEvents) {
         const element = document.getElementById(id);
         if (element) {
             element.style.display = "block";
-            SHOW_INVITE = true;
+            
+            // Fix: Use the ID string to find the index, not the element object
+            const eventIndex = allEvents.indexOf(id);
+            const quote = document.querySelectorAll(`.quote`)[eventIndex+1];
+            
+            if (quote) quote.style.display = "block"; // Changed from 'none' to 'block' assuming you want to show it
+            
+            SHOW_INVITE = true; 
         }
     });
 }

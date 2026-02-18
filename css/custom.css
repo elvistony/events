@@ -89,6 +89,7 @@ a.text-primary:hover {
   align-content: center;
   background-color: rgba(0, 0, 0, 0.362);
   backdrop-filter: blur(8px);
+  min-height: 60vh;
 }
 
 .quote > h4{
@@ -472,17 +473,22 @@ background-attachment: scroll;
 .color-circle {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     cursor: pointer;
     border: 3px solid transparent;
     transition: all 0.3s ease;
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1)
+    /* box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1) */
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 2px 1px 13px #808080;
+    transition: 0.5s ease;
 }
 
 .color-circle:hover {
+    transition: 0.5s ease;
     transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-color: rgba(0, 0, 0, 0.2);
+    /* box-shadow: 2px 1px 20px #000000; */
+    border-color: rgba(255, 208, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -571,4 +577,8 @@ background-attachment: scroll;
 
 .page-section > section{
   padding-bottom: 4rem;
+}
+
+.effect-shine{
+  display: inline-block !important;
 }

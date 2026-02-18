@@ -3,7 +3,7 @@ function closeLoader(){
     setTimeout(()=>{
         document.querySelector('.overlay').style.display='none';
     },600)
-    console.log("Overlay");
+    // console.log("Overlay");
 }
 
 setTimeout(()=>{

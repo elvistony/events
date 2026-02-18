@@ -16,6 +16,10 @@ html{
     scrollbar-gutter: stable;
 }
 
+body{
+    overflow-x: hidden !important;
+}
+
 .envelope-container {
     margin: 0;
     padding: 0;

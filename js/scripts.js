@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', event => {
         // Set the wedding date (CHANGE THIS TO YOUR ACTUAL WEDDING DATE)
         // Format: new Date('Month Day, Year Hour:Minute:Second')
         const weddingDate = new Date('July 23, 2026 12:00:00').getTime();
-        
+        // const weddingDate = new Date('Jan 23, 2026 12:00:00').getTime();
         function updateCountdown() {
             const now = new Date().getTime();
             const timeRemaining = weddingDate - now;
@@ -117,6 +117,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 document.getElementById('seconds').textContent = seconds;
             } else {
                 // Wedding date has passed
+                document.querySelector('.countdown-container').style.display='none';
                 document.getElementById('weeks').textContent = '0';
                 document.getElementById('days').textContent = '0';
                 document.getElementById('hours').textContent = '0';

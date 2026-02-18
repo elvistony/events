@@ -44,6 +44,7 @@
 
 .btn-fab:hover {
     transform: scale(1.1);
+    transition: 0.5s ease;
     filter: brightness(1.2);
 }
 
@@ -123,4 +124,16 @@
 .lang-option:hover {
     background-color: var(--blush);
     color: white;
+}
+
+[data-envelope="closed"]{
+    .btn-fab{
+        opacity: 0;
+    }
+}
+
+[data-envelope="open"]{
+    .btn-fab{
+        opacity: 1;
+    }
 }

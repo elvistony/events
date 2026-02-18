@@ -7,7 +7,27 @@
         <meta name="author" content="Elvis & Maritta" />
         <meta property="og:title" content="Elvis & Maritta">
         <meta property="og:description" content="Elvis & Maritta You're invited to our wedding! ">
-        <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+        <meta property="og:image" content="/assets/img/banner.png">
+        <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wedding.elvistony.dev" />
+        <meta property="og:title" content="Elvis & Maritta" />
+        <meta property="og:description" content="You're invited!" />
+        <meta property="og:image" content="/assets/img/banner.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Preview of the page content" />
+        <meta property="og:site_name" content="M&E Union" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="/assets/img/banner.png" />
+        <meta name="twitter:url" content="https://wedding.elvistony.dev" />
+        <meta name="twitter:title" content="Elvis & Maritta" />
+        <meta name="twitter:description" content="You're invited!" />
+        <meta name="twitter:image" content="/assets/img/banner.png" />
+        <meta name="twitter:image:alt" content="Preview of the page content" />
 
         <title>Elvis & Maritta</title>
         <!-- Favicon-->
@@ -43,8 +63,9 @@
         <link rel="stylesheet" href="css/slideshow.css" />
         <link rel="stylesheet" href="css/translations.css" />
         <link rel="stylesheet" href="css/flare.css">
+        <link rel="stylesheet" href="css/fade-ani.css">
     </head>
-    <body id="page-top" data-lang="en">
+    <body id="page-top" data-lang="en" data-envelope="closed">
         <!-- Scroll Progress Bar -->
         <div class="overlay">
             <div class="cssload-main">
@@ -83,7 +104,7 @@
                     <div class="flap flap-bottom"></div>
 
                     <div class="invitation-text">
-                        <span class="effect-shine" data-content-id="invite-subtext">An invitation just for you!</span>
+                        <span class="effect-shine" data-content-id="invite-subtext">Tap the Wax Seal</span>
                     </div>
                 </div>
             </div>
@@ -148,9 +169,9 @@
         <section class="page-section py-5 bg-white m-full-height">
             <h2 class="text-center mb-5 great-vibes-regular" style="color: var(--theme-burgundy)" data-content-id="date-hint">Caress the roses to find out the date!</h2>
             <div class="container">
-                <div class="row justify-content-center g-4">
+                <div class="row justify-content-center g-4" >
                     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="scratch-card">
+                        <div class="scratch-card" data-aos="zoom-out-down" data-aos-delay="100">
                             <div class="scratch-card-cover-container">
                                 <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
                                 <!-- only needed for Safari and iOS browsers -->
@@ -163,7 +184,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="scratch-card">
+                        <div class="scratch-card" data-aos="zoom-out-down" data-aos-delay="200">
                             <div class="scratch-card-cover-container">
                                 <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
                                 <!-- only needed for Safari and iOS browsers -->
@@ -176,7 +197,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="scratch-card">
+                        <div class="scratch-card" data-aos="zoom-out-down" data-aos-delay="300">
                             <div class="scratch-card-cover-container">
                                 <canvas class="scratch-card-canvas" width="150" height="150"></canvas>
                                 <!-- only needed for Safari and iOS browsers -->
@@ -195,10 +216,10 @@
         <!-- Bible Quote Banner 1 -->
         <section class="page-section  text-white text-center py-5 full-height quote" data-dwelltime="3">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-1">
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-1" data-aos="zoom-out-down">
                     "Many waters cannot quench love; rivers cannot sweep it away. If one were to give all the wealth of one's house for love, it would be utterly scorned."
                 </h4>
-                <p class="mt-3 " data-content-id="bible-verse-1">— Song of Songs Chapter 8 Verse 7</p>
+                <p class="mt-3 " data-content-id="bible-verse-1" data-aos="zoom-out-down" data-aos-delay="100">— Song of Songs Chapter 8 Verse 7</p>
             </div>
         </section>
 
@@ -208,7 +229,7 @@
             <section class="py-5">
                 <div class="container px-4 px-lg-3">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6 order-lg-2">
+                        <div class="col-lg-6 order-lg-2" data-aos="fade-down-left">
                             <div class="event-map-container">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk"
@@ -219,7 +240,7 @@
                                 ></iframe>
                             </div>
                         </div>
-                        <div class="col-lg-6 order-lg-1">
+                        <div class="col-lg-6 order-lg-1" data-aos="fade-down-right">
                             <h2 class="mt-0 great-vibes-regular" data-content-id="event-1-title">Madhuram Veppu</h2>
                             <h5 class="text-primary mb-3 cinzel-decorative-regular" data-content-id="event-2-subtitle" data-content-id="event-1-subtitle">Pre-Wedding Celebration</h5>
                             <p class="text-muted mb-4" data-content-id="event-1-desc">
@@ -234,7 +255,7 @@
                             </p>
                             <div class="event-calendar-buttons mt-4">
                                 <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('madhuram')">
-                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar"></span>
+                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
                                 </button>
                             </div>
                             <div class="event-color-palette mt-4">
@@ -247,10 +268,8 @@
                                     <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
                                 </div> -->
                                 <div class="color-circles">
-                                    <a href="/colour/#800020" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#ffd8d8" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#135013" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#FFFFF0" target="_blank" class="color-circle"></a>
+                                    <a href="/colour/#D0872E" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#FEFCE8" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
@@ -262,8 +281,8 @@
         <!-- Bible Quote Banner 2 -->
         <section class="page-section text-white text-center py-5 full-height quote" data-dwelltime="3">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-2">"Therefore what God has joined together, let no one separate."</h4>
-                <p class="mt-3 " data-content-id="bible-verse-2">— Mark Chapter 10 Verse 9</p>
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-2" data-aos="zoom-out-down">"Therefore what God has joined together, let no one separate."</h4>
+                <p class="mt-3 " data-content-id="bible-verse-2" data-aos="zoom-out-down" data-aos-delay="100">— Mark Chapter 10 Verse 9</p>
             </div>
         </section>
 
@@ -273,13 +292,13 @@
             <section class="py-5">
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" data-aos="fade-down-right">
                             <img src="/assets/img/rak-wedding.png" style="filter: brightness(1.1)" class="w-100 mb-4" alt="" />
                             <!-- <div class="event-map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div> -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" data-aos="fade-down-left">
                             <h2 class="mt-0 great-vibes-regular" data-content-id="event-2-title" data-content-id="event-2-title">Our Wedding Ceremony</h2>
                             <h5 class="text-primary mb-3" data-content-id="event-2-subtitle" data-content-id="event-2-subtitle">The Main Event</h5>
                             <p class="text-muted mb-4" data-content-id="event-2-desc">
@@ -306,10 +325,10 @@
                                     <div class="color-circle" style="background-color: var(--theme-ivory)" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
                                 </div> -->
                                 <div class="color-circles">
-                                    <a href="/colour/#800020" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#ffd8d8" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#135013" target="_blank" class="color-circle"></a>
-                                    <a href="/colour/#FFFFF0" target="_blank" class="color-circle"></a>
+                                    <a href="/colour/#800020" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#145A32" target="_blank" data-aos="fade-down" data-aos-delay="500" class="color-circle"></a>
+                                    <a href="/colour/#ffd8d8" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
+                                    <a href="/colour/#FFFFF0" target="_blank" data-aos="fade-down" data-aos-delay="600" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
@@ -321,10 +340,10 @@
         <!-- Bible Quote Banner 3 -->
         <section class="page-section text-white text-center py-5 full-height quote" data-dwelltime="3">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-3">
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-3" data-aos="zoom-out-down">
                     "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
                 </h4>
-                <p class="mt-3 " data-content-id="bible-verse-3">— 1 Corinthians Chapter 13 Verse4</p>
+                <p class="mt-3 " data-content-id="bible-verse-3" data-aos="zoom-out-down" data-aos-delay="100">— 1 Corinthians Chapter 13 Verse4</p>
             </div>
         </section>
 
@@ -334,7 +353,7 @@
             <section>
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6 order-lg-2">
+                        <div class="col-lg-6 order-lg-2" data-aos="fade-down-right">
                             <div class="event-map-container">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk"
@@ -345,7 +364,7 @@
                                 ></iframe>
                             </div>
                         </div>
-                        <div class="col-lg-6 order-lg-1">
+                        <div class="col-lg-6 order-lg-1" data-aos="fade-down-left">
                             <h2 class="mt-0 great-vibes-regular" data-content-id="event-3-title">Ajman Reception</h2>
                             <h5 class="text-primary mb-3" data-content-id="event-3-subtitle">Celebration in the Emirates</h5>
                             <p class="text-muted mb-4" data-content-id="event-3-desc">
@@ -366,11 +385,8 @@
                             <div class="event-color-palette mt-4">
                                 <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                                 <div class="color-circles">
-                                    <div class="color-circle" style="background-color: #ffb6c1" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                    <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                    <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                    <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                    <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                    <a href="/colour/#D0872E" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#FEFCE8" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
@@ -382,8 +398,8 @@
         <!-- Bible Quote Banner 4 -->
         <section class="page-section text-white text-center py-5 full-height quote" data-dwelltime="3">
             <div class="container px-4 px-lg-5">
-                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-4">"Rejoice in the Lord always. I will say it again: Rejoice!"</h4>
-                <p class="mt-3 " data-content-id="bible-verse-4">— Philippians Chapter 4 Verse 4</p>
+                <h4 class="mb-0" style="font-style: italic; font-size: 1.3rem" data-content-id="bible-quote-4" data-aos="zoom-out-down">"Rejoice in the Lord always. I will say it again: Rejoice!"</h4>
+                <p class="mt-3 " data-content-id="bible-verse-4" data-aos="zoom-out-down" data-aos-delay="100">— Philippians Chapter 4 Verse 4</p>
             </div>
         </section>
 
@@ -393,13 +409,13 @@
             <section class="py-5">
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" data-aos="fade-down-right">
                             <!-- <div class="event-map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15687.554950497257!2d76.20213249275925!3d10.587871401643813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e92bb38608df%3A0x2a4f06ff16e46ffe!2sThiroor%2C%20Thrissur%2C%20Kerala%2C%20India!5e0!3m2!1sen!2suk!4v1770159845168!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div> -->
                             <img src="/assets/img/santhome-square.png" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" data-aos="fade-down-left">
                             <h2 class="mt-0 great-vibes-regular" data-content-id="event-4-title">Thiroor Reception</h2>
                             <h5 class="text-primary mb-3" data-content-id="event-4-subtitle">Homecoming Celebration</h5>
                             <p class="text-muted mb-4" data-content-id="event-4-desc">
@@ -420,11 +436,8 @@
                             <div class="event-color-palette mt-4">
                                 <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                                 <div class="color-circles">
-                                    <div class="color-circle" style="background-color: #ffb6c1" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                    <div class="color-circle" style="background-color: #dda0dd" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                    <div class="color-circle" style="background-color: #ffe4b5" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                    <div class="color-circle" style="background-color: #f0e68c" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                    <div class="color-circle" style="background-color: #b0e0e6" onclick="showColorOverlay('#B0E0E6')" title="Light Blue"></div>
+                                    <a href="/colour/#D0872E" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#FEFCE8" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +448,7 @@
 
         <!-- Community Album -->
         <section class="page-section bg-dark text-white full-height py-5" data-dwelltime="">
-            <div class="container px-2 px-lg-1 text-center">
+            <div class="container px-2 px-lg-1 text-center" data-aos="fade-down">
                 <p>Share your moments to the Community Album</p>
                 <a class="btn btn-light btn-xl" href="https://google.com">Upload Memories!</a>
             </div>
@@ -443,11 +456,11 @@
 
         <!-- Footer-->
         <footer class="py-5 page-section bg-white" data-dwelltime="5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted pt-5">Made by Elvis with 💖 for Maritta</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted pt-5" data-aos="fade-down">Made by Elvis with 💖 for Maritta</div></div>
             <div class="w-100 text-center">
-                <img src="/assets/img/rose-center-piece.png" style="height: 100px" alt="" />
+                <img src="/assets/img/rose-center-piece.png" data-aos="fade-left" data-aos-delay="200" style="height: 100px" alt="" />
             </div>
-            <div class="w-100 text-center">
+            <div class="w-100 text-center" data-aos="fade-down" data-aos-delay="400">
                 <button type="button" class="btn btn-sm pastel-cream" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Scroll up</button>
             </div>
         </footer>
@@ -455,7 +468,8 @@
         <div class="banner-flowers-top"></div>
 
         <!-- <audio id="bgm" preload="auto" onloadeddata="this.currentTime = 29.2" src="/assets/media/ordinary.m4a" loop hidden></audio> -->
-        <audio id="bgm" preload="auto" onloadeddata="this.currentTime = 41.8" src="/assets/media/olivia.m4a" loop hidden></audio>
+        <!-- <audio id="bgm" preload="auto" onloadeddata="this.currentTime = 41.8" src="/assets/media/olivia.m4a" loop hidden></audio> -->
+        <audio id="bgm" preload="auto" onloadeddata="this.currentTime=54.8;" src="/assets/media/raye.m4a" loop hidden></audio>
 
         <div class="fab-wrapper">
             <button class="btn-fab btn-play" onclick="togglePlay()">
@@ -513,13 +527,12 @@
         <!-- Page Alter based on guest tier -->
         <script src="/js/envelope.js"></script>
         <script src="js/page-url.js"></script>
-
+        <script src="/js/fade-ani.js"></script>
         <script src="/js/scratch.js"></script>
         <!-- FAB Module -->
         <script src="/js/fab.js"></script>
         <script src="/js/slideshow.js"></script>
         <script src="/js/translations.js"></script>
         <script src="/js/colour-circles.js"></script>
-
     </body>
 </html>
