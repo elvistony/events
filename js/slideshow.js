@@ -45,7 +45,7 @@ async function startSlideshow() {
     if (!isPlaying) return;
 
     // 1. Find the section currently most visible in the viewport
-    const sections = Array.from(document.querySelectorAll('.page-section'));
+    const sections = Array.from(document.querySelectorAll('.page-section')).filter(section => section.style.display !== 'none');
     const currentSection = sections.find(sec => {
         const rect = sec.getBoundingClientRect();
         return rect.bottom > 100; // Returns the first section that hasn't scrolled away
