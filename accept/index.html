@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overseas Accept</title>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* 1. Styling the Page */
+        body {
+            background-color: #f5e8e8; /* Beige */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            overflow-y: hidden;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            min-height: 100vh;
+        }
+
+        h3 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 2. Responsive Wrapper */
+        .form-container {
+            width: 100%;
+            max-width: 640px; /* Matches Google's default width */
+            height: 75vh; /* Adjust as needed */
+            border: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .texturina {
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+    </style>
+</head>
+<body class="texturina">
+
+    <div style="text-align: center; max-width: 640px; width: 100%;">
+        <h2>Wedding RSVP</h2>
+        <!-- <h3 >We're delighted to have you participate at our event! Please fill the RSVP below.</h3> -->
+        <div style="background-color: white; border-radius: 10px; margin: 20px 0px; width: 100%; padding: 10px 0px; border: 1px solid gray;">
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: right;width: 80px;" ><b>Name:</b></td>
+                    <td><span id="greeting">Guest</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <iframe 
+            id="googleForm"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeRDksAeHeHkrBAWf_C53lD41310Ek1J9kuh8Gcuhw1YmVq8A/viewform?embedded=true" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">Loading…</iframe>
+    </div>
+
+    <script>
+        // 3. Logic to handle URL Parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('guestName');
+        const formIframe = document.getElementById('googleForm');
+        const greetingHeader = document.getElementById('greeting');
+
+        if (guestName) {
+            // Update the visible Greeting
+            greetingHeader.innerText = `${guestName}`;
+
+            // Prefill the Google Form
+            // REPLACE 'entry.123456789' with your actual entry ID
+            const entryID = 'entry.1656123711'; 
+            const currentSrc = formIframe.src;
+            formIframe.src = `${currentSrc}&${entryID}=${encodeURIComponent(guestName)}`;
+        }
+    </script>
+</body>
+</html>
