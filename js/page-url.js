@@ -48,6 +48,10 @@ const allEvents = ["event-madhuram", "event-wedding", "event-reception-uae", "ev
 function hideAllEvents() {
     allEvents.forEach((id, index) => {
         const element = document.getElementById(id);
+        const others = document.querySelectorAll("[data-event='"+id+"']");
+        others.forEach(element => {
+            element.style.display='none';
+        });
         if (element) element.style.display = "none";
         
         // Hide the corresponding quote for this ID as well
@@ -70,6 +74,10 @@ function showEvents(allowedEvents) {
             
             SHOW_INVITE = true; 
         }
+        const others = document.querySelectorAll("[data-event='"+id+"']");
+        others.forEach(element => {
+            element.style.display='block';
+        });
     });
 }
 

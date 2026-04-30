@@ -10,16 +10,22 @@ const DEFAULT_DWELL_TIME = 10; // seconds
 function togglePlay() {
     isPlaying = !isPlaying;
     const playIcon = document.getElementById('playIcon');
-    
     if (isPlaying) {
         playIcon.className = 'fa fa-pause';
         playIcon.parentElement.classList.add('burgundy')
         startSlideshow();
+        isMuted = false;
+        document.getElementById('bgm').muted=false;
     } else {
         playIcon.className = 'fa fa-play';
         playIcon.parentElement.classList.remove('burgundy')
         stopSlideshow();
+        isMuted = true;
+        document.getElementById('bgm').muted=true;
+        
     }
+    
+    
 }
 
 function toggleSound(){
