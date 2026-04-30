@@ -14,7 +14,7 @@ const weddingTranslations = {
         "event-1-title": "Madhuram Veppu",
         "event-1-subtitle": "Pre-Wedding Celebration",
         "event-1-desc": "Join us for the traditional Madhuram Veppu ceremony, a beautiful pre-wedding celebration filled with joy, family, and cherished traditions.",
-        "event-1-venue": "[Venue Name & Address]",
+        "event-1-venue": "Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah",
         "event-add-to-calendar": " Add to Calendar",
         "event-theme-title": "Event Theme:",
         "bible-quote-2": "\"Therefore what God has joined together, let no one separate.\"",
@@ -28,11 +28,13 @@ const weddingTranslations = {
         "event-3-title": "Ajman Reception",
         "event-3-subtitle": "Celebration in the Emirates",
         "event-3-desc": "Join us for an evening of celebration, delicious food, and joyful dancing as we kick off our new life together.",
+        "event-3-venue": "Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah",
         "bible-quote-4": "\"Rejoice in the Lord always. I will say it again: Rejoice!\"",
         "bible-verse-4": "— Philippians 4:4",
         "event-4-title": "Thiroor Reception",
         "event-4-subtitle": "Homecoming Celebration",
-        "event-4-desc": "Join us for a joyous homecoming reception with family and friends from our beloved Thrissur. This celebration brings together our roots and loved ones."
+        "event-4-desc": "Join us for a joyous homecoming reception with family and friends from our beloved Thrissur. This celebration brings together our roots and loved ones.",
+        "event-4-venue": "Santhome Square, Thiroor, Thrissur, India"
     },
     "ar": {
         "invite-subtext": "دعوة خاصة لك!",

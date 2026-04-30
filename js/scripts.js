@@ -15,28 +15,28 @@ function addToCalendar(eventId) {
         'madhuram': {
             title: 'Madhuram Veppu - Elvis & Maritta',
             description: 'Pre-Wedding Celebration - Traditional ceremony filled with joy, family, and cherished traditions.',
-            location: '[Venue Name & Address]',
+            location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
             startDateTime: '20260510T100000', // YYYYMMDDTHHMMSS (Update to your date/time)
             endDateTime: '20260510T133000'
         },
         'wedding': {
             title: 'Wedding Ceremony - Elvis & Maritta',
             description: 'Our Wedding Ceremony - Join us as we make our vows before God and our loved ones.',
-            location: '[Venue Name & Address]',
+            location: 'St. Anthony of Padua RC Church, Ras Al Khaimah, UAE',
             startDateTime: '20260525T100000', // YYYYMMDDTHHMMSS (Update to your date/time)
             endDateTime: '20260525T120000'
         },
         'uae-reception': {
             title: 'UAE Reception - Elvis & Maritta',
             description: 'Celebration in the Emirates - Evening of celebration, delicious food, and joyful dancing.',
-            location: '[Venue Name & Address, UAE]',
+            location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
             startDateTime: '20260602T183000', // YYYYMMDDTHHMMSS (Update to your date/time)
             endDateTime: '20260603T000000'
         },
         'thrissur-reception': {
             title: 'Thrissur Reception - Elvis & Maritta',
             description: 'Homecoming Celebration - Join us for a joyous homecoming reception with family and friends.',
-            location: '[Venue Name & Address, Thrissur]',
+            location: 'Santhome Square, Thiroor, Thrissur',
             startDateTime: '20260620T180000', // YYYYMMDDTHHMMSS (Update to your date/time)
             endDateTime: '20260620T235900'
         }
