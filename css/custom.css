@@ -582,3 +582,18 @@ background-attachment: scroll;
 .effect-shine{
   display: inline-block !important;
 }
+
+/* Pulse Animation */
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgb(246 218 0 / 46%)
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+  }
+}
