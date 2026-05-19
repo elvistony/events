@@ -16,6 +16,12 @@ const codeToEvents = {
     },
     "dkdhguxb": {
         events: ["event-madhuram", "event-wedding", "event-reception-uae", "event-reception-thrissur"]
+    },
+    "edjgkd2s": {
+        events: ["event-wedding", "event-reception-uae", "event-reception-thrissur"]
+    },
+    "fldfdgj4": {
+        events: ["event-reception-uae","event-reception-thrissur"]
     }
 };
 

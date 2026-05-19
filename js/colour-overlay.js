@@ -9,11 +9,23 @@ function showColorOverlay(color) {
 
 // 1. Your Lookup Dictionary
 const colorLibrary = {
+
+    "f1c40f":{ name:"Golden"},
+    "fafaf9": { name:"White"},
+
     "800020": { name: "Burgundy"},
     "ffd8d8": { name: "Blush"},
-    "135013": { name: "Forest Green" },
+    "228b22": { name: "Forest Green" },
     "fffff0": { name: "Ivory"},
 
+    
+
+    "cc5500":{ name:"Burnt Orange"},
+    "fafaf9": { name:"White"},
+
+    "f7e7ce":{ name:"Champange"},
+    "f1c40f":{ name:"Golden"},
+    "fffff0": { name:"White"},
 };
 
 function applyColorFromHash() {
@@ -22,7 +34,7 @@ function applyColorFromHash() {
     
     const overlay = document.getElementById('colorOverlay');
     const title = document.querySelector('.colour-name');
-
+    console.log(hash)
     if (colorLibrary[hash]) {
         const colorData = colorLibrary[hash];
         
