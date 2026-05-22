@@ -53,9 +53,9 @@ function loadEnvelope(){
     document.querySelector('.envelope-container').style.display = 'none';
     document.body.innerHTML=`
 <div class="full-height text-center" >
-<img src="https://images.pexels.com/photos/5704331/pexels-photo-5704331.jpeg?cs=srgb&dl=pexels-eliab-mendez-3845400-5704331.jpg&fm=jpg&w=640&h=424&_gl=1*no0ips*_ga*MTE5Mzk2MDYxNS4xNzcwNzYyMzkz*_ga_8JE65Q40S6*czE3NzA3NjIzOTMkbzEkZzEkdDE3NzA3NjI0MjYkajI3JGwwJGgw" style="max-height:400px;" class="m-3" />
-<h3>Oops, Failed to Load invite!</h3>
-<h4>Please use the link again.</h4>
+<img style="border-radius:10px; height:400px;" src="https://images.pexels.com/photos/36516061/pexels-photo-36516061.jpeg?cs=srgb&dl=pexels-alex-ohan-2150877096-36516061.jpg&fm=jpg&w=640&h=427&_gl=1*z5r6vf*_ga*MTM1OTA1NjMyNy4xNzU3MTAwMjY1*_ga_8JE65Q40S6*czE3Nzk0NzgwMzgkbzYkZzEkdDE3Nzk0NzgwNTkkajM5JGwwJGgw" style="max-height:400px;" class="m-3" />
+<h3>Sorry, Failed to Load invite!</h3>
+<h5>Please open the link again.</h5>
 </div>
     `;
     document.body.style.alignContent='center';

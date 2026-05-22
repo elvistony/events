@@ -106,7 +106,7 @@
                     <div class="flap flap-bottom"></div>
 
                     <div class="invitation-text">
-                        <span class="effect-shine" data-content-id="invite-subtext">Tap the Wax Seal</span>
+                        <span class="effect-shine texturina" data-content-id="invite-subtext">Tap the Wax Seal</span>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
         </header>
 
         <section class="page-section py-5 bg-white m-full-height" data-event="event-wedding" data-dwelltime="2">
-            <h2 class="text-center mb-5 great-vibes-regular" style="color: var(--theme-burgundy)" data-content-id="date-hint">Caress the roses to find out the date of the Wedding!</h2>
+            <h2 class="text-center mb-5 great-vibes-regular" style="color: var(--theme-burgundy)" data-content-id="date-hint">Caress the roses to find out the <br> date of the Wedding!</h2>
             <div class="container">
                 <div class="row justify-content-center g-4" >
                     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
@@ -230,7 +230,7 @@
         <div class="page-section bg-white" id="event-madhuram" data-dwelltime="10">
             <div class="banner-flowers-bottom"></div>
             <section class="py-5">
-                <div class="container px-4 px-lg-3">
+                <div class="container px-4 px-lg-3 py-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
                         <div class="col-lg-6 order-lg-2" data-aos="fade-down">
                             <!-- <div class="event-map-container">
@@ -242,49 +242,56 @@
                                     referrerpolicy="no-referrer-when-downgrade"
                                 ></iframe>
                             </div> -->
-                            <img src="/assets/img/rak-almarjan.png" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
+                            <img src="/assets/img/rak-almarjan.png" data-aos="fade" data-aos-delay="350" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
 
                         </div>
-                        <div class="col-lg-6 order-lg-1" data-aos="fade-down">
-                            <h2 class="mt-0 great-vibes-regular" data-content-id="event-1-title">Madhuram Veppu</h2>
-                            <h5 class="text-primary mb-3 cinzel-decorative-regular" data-content-id="event-2-subtitle" data-content-id="event-1-subtitle">Pre-Wedding Celebration</h5>
-                            <p class="text-muted mb-4" data-content-id="event-1-desc">
+                        <div class="col-lg-6 order-lg-1">
+                            <h2 class="mt-0 great-vibes-regular" data-aos="fade" data-aos-delay="350" data-content-id="event-1-title">Madhuram Veppu</h2>
+                            <h5 class="text-primary mb-3 cinzel-decorative-regular" data-aos="fade" data-aos-delay="350" data-content-id="event-2-subtitle" data-content-id="event-1-subtitle">Pre-Wedding Celebration</h5>
+                            <p class="text-muted mb-4" data-content-id="event-1-desc" data-aos="fade" data-aos-delay="350">
                                 Join us for the traditional Madhuram Veppu ceremony, a beautiful pre-wedding celebration filled with joy, family, and cherished traditions. This
                                 intimate gathering will be a time of blessings and preparation as we count down to our special day.
                             </p>
-                            <p class="text-muted">
+                            
+                            <div class="event-calendar-buttons my-4" style="float:right" data-aos="fade" data-aos-delay="350">
+                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('madhuram')">
+                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
+                                </button>
+                            </div>
+
+                            <p class="text-muted" data-aos="fade" data-aos-delay="350">
                                 <strong>Date & Time:</strong><br />
                                 <span>22 <sup>nd</sup> July 2026 <br /><br /></span>
                                 <strong>Location:</strong><br />
                                 <span data-content-id="event-1-venue">Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah</span>
                             </p>
-                            <div class="event-calendar-buttons mt-4">
-                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('madhuram')">
-                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
-                                </button>
+
+                            
+                            
+                            <div class="row gx-4 gx-lg-5 align-items-center mt-4">
+                                <div class="">
+                                        <iframe
+                                            class="event-map-container"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
+                                            style="border: 0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            height="50"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                </div>
                             </div>
+
                             <div class="event-color-palette mt-4">
                                 <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                                 <div class="color-circles">
-                                    <a href="/colour/#F1C40F" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
-                                    <a href="/colour/#FAFAF9" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
+                                    <a href="/colour/#F1C40F" target="_blank" data-aos="fade" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#FAFAF9" target="_blank" data-aos="fade" data-aos-delay="400" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row gx-4 gx-lg-5 align-items-center mt-4">
-                        <div class="">
-                                <iframe
-                                    class="event-map-container"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
-                                    style="border: 0"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    height="50"
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                        </div>
-                    </div>
+                    
                 </div>
                 
             </section>
@@ -302,62 +309,61 @@
         <div class="page-section bg-white" id="event-wedding" data-dwelltime="10">
             <div class="banner-flowers-bottom"></div>
             <section class="py-5">
-                <div class="container px-4 px-lg-5">
+                <div class="container px-4 px-lg-5 py-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6" data-aos="fade-down">
+                        <div class="col-lg-6">
                             <img src="/assets/img/rak-wedding.png" style="filter: brightness(1.1)" class="w-100 mb-4" alt="" />
                             <!-- <div class="event-map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div> -->
                         </div>
-                        <div class="col-lg-6" data-aos="fade-down">
-                            <h2 class="mt-0 great-vibes-regular" data-content-id="event-2-title" data-content-id="event-2-title">Our Wedding Ceremony</h2>
-                            <h5 class="text-primary mb-3" data-content-id="event-2-subtitle" data-content-id="event-2-subtitle">The Main Event</h5>
-                            <p class="text-muted mb-4" data-content-id="event-2-desc">
+                        <div class="col-lg-6">
+                            <h2 class="mt-0 great-vibes-regular" data-aos="fade" data-aos-delay="350" data-content-id="event-2-title" data-content-id="event-2-title">Our Wedding Ceremony</h2>
+                            <h5 class="text-primary mb-3" data-aos="fade" data-aos-delay="400" data-content-id="event-2-subtitle" data-content-id="event-2-subtitle">The Main Event</h5>
+                            <p class="text-muted mb-4" data-aos="fade" data-aos-delay="450" data-content-id="event-2-desc">
                                 We joyfully invite you to celebrate our wedding as we make our vows before God and our loved ones. This sacred moment marks the beginning of our journey
                                 together as husband and wife, and we would be honored to have you share in this blessing.
                             </p>
-                            <p class="text-muted">
+
+                            <div class="event-calendar-buttons mt-4" data-aos="fade" style="float: right;" data-aos-delay="350">
+                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('wedding')">
+                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
+                                </button>
+                            </div>
+
+                            <p class="text-muted" data-aos="fade" data-aos-delay="350">
                                 <strong>Date & Time:</strong><br />
                                 23 <sup>rd</sup> July 2026 <br /><br />
                                 <strong>Location:</strong><br />
                                 <span data-content-id="event-2-venue">St. Anthony of Padua RC Church, Ras Al Khaimah, UAE</span>
                             </p>
-                            <div class="event-calendar-buttons mt-4">
-                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('wedding')">
-                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
-                                </button>
+
+                            <div class="row gx-4 gx-lg-5 align-items-center mt-4">
+                                <div class="">
+                                        <iframe
+                                            class="event-map-container"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
+                                            style="border: 0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            height="50"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
                             </div>
+                            
                             <div class="event-color-palette mt-4">
                                 <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
-                                <!-- <div class="color-circles">
-                                    <div class="color-circle" style="background-color: var(--theme-burgundy)" onclick="showColorOverlay('#FFB6C1')" title="Light Pink"></div>
-                                    <div class="color-circle" style="background-color: var(--theme-blush)" onclick="showColorOverlay('#DDA0DD')" title="Plum"></div>
-                                    <div class="color-circle" style="background-color: var(--theme-forest-green)" onclick="showColorOverlay('#FFE4B5')" title="Peach"></div>
-                                    <div class="color-circle" style="background-color: var(--theme-ivory)" onclick="showColorOverlay('#F0E68C')" title="Light Gold"></div>
-                                </div> -->
                                 <div class="color-circles">
-                                    <a href="/colour/#800020" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
-                                    <a href="/colour/#228B22" target="_blank" data-aos="fade-down" data-aos-delay="500" class="color-circle"></a>
-                                    <a href="/colour/#ffd8d8" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
-                                    <a href="/colour/#FFFFF0" target="_blank" data-aos="fade-down" data-aos-delay="600" class="color-circle"></a>
+                                    <a href="/colour/#800020" target="_blank" data-aos="fade" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#228B22" target="_blank" data-aos="fade" data-aos-delay="500" class="color-circle"></a>
+                                    <a href="/colour/#ffd8d8" target="_blank" data-aos="fade" data-aos-delay="400" class="color-circle"></a>
+                                    <a href="/colour/#FFFFF0" target="_blank" data-aos="fade" data-aos-delay="600" class="color-circle"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row gx-4 gx-lg-5 align-items-center mt-4">
-                        <div class="">
-                                <iframe
-                                    class="event-map-container"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
-                                    style="border: 0"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    height="50"
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
-                    </div>
+                    
                 </div>
             </section>
         </div>
@@ -375,10 +381,10 @@
         <!-- Event 3: Ajman Reception -->
         <div class="page-section bg-white" id="event-reception-uae" data-dwelltime="10">
             <div class="banner-flowers-bottom"></div>
-            <section>
-                <div class="container px-4 px-lg-5">
+            <section class="py-5">
+                <div class="container px-4 px-lg-5 py-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6 order-lg-2" data-aos="fade-down">
+                        <div class="col-lg-6 order-lg-2" data-aos="fade" data-aos-delay="350">
                             <!-- <div class="event-map-container">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115329.40817607811!2d55.443547613405656!3d25.4033375383945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1770159767326!5m2!1sen!2suk"
@@ -392,35 +398,26 @@
                             <img src="/assets/img/rak-almarjan.png" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
 
                         </div>
-                        <div class="col-lg-6 order-lg-1" data-aos="fade-down">
-                            <h2 class="mt-0 great-vibes-regular" data-content-id="event-3-title">Ajman Reception</h2>
-                            <h5 class="text-primary mb-3" data-content-id="event-3-subtitle">Celebration in the Emirates</h5>
-                            <p class="text-muted mb-4" data-content-id="event-3-desc">
+                        <div class="col-lg-6 order-lg-1">
+                            <h2 class="mt-0 great-vibes-regular" data-aos="fade" data-aos-delay="350" data-content-id="event-3-title">Ajman Reception</h2>
+                            <h5 class="text-primary mb-3" data-aos="fade" data-aos-delay="400" data-content-id="event-3-subtitle">Celebration in the Emirates</h5>
+                            <p class="text-muted mb-4" data-aos="fade" data-aos-delay="450" data-content-id="event-3-desc">
                                 Join us for an evening of celebration, delicious food, and joyful dancing as we kick off our new life together. Your presence and blessings mean the
                                 world to us, and we look forward to creating wonderful memories with all those we love.
                             </p>
-                            <p class="text-muted">
+                            <div class="event-calendar-buttons mt-4" style="float: right;" data-aos="fade" data-aos-delay="350">
+                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('uae-reception')">
+                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
+                                </button>
+                            </div>
+                            <p class="text-muted" data-aos="fade" data-aos-delay="500">
                                 <strong>Date & Time:</strong><br />
                                 24 <sup>th</sup> July 2026 <br /><br />
                                 <strong>Location:</strong><br />
                                 <span data-content-id="event-3-venue">Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah</span>
                             </p>
-                            <div class="event-calendar-buttons mt-4">
-                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('uae-reception')">
-                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar">Add to Calendar</span>
-                                </button>
-                            </div>
-                            <div class="event-color-palette mt-4">
-                                <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
-                                <div class="color-circles">
-                                    <a href="/colour/#cc5500" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
-                                    <a href="/colour/#fafaf9" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 align-items-center mt-4">
-                        <div class="">
+                            
+                            <div class="">
                                 <iframe
                                     class="event-map-container"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
@@ -431,9 +428,22 @@
                                     referrerpolicy="no-referrer-when-downgrade"
                                 ></iframe>
                             </div>
+                            
+                            <div class="row gx-4 gx-lg-5 align-items-center mt-4">
+                        
+                                <div class="event-color-palette mt-4">
+                                    <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
+                                    <div class="color-circles">
+                                        <a href="/colour/#cc5500" target="_blank" data-aos="fade" data-aos-delay="300" class="color-circle"></a>
+                                        <a href="/colour/#fafaf9" target="_blank" data-aos="fade" data-aos-delay="400" class="color-circle"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
-            </section class="py-5">
+            </section >
         </div>
 
         <!-- Bible Quote Banner 4 -->
@@ -448,56 +458,59 @@
         <div class="page-section bg-white" id="event-reception-thrissur" data-dwelltime="10">
             <div class="banner-flowers-bottom"></div>
             <section class="py-5">
-                <div class="container px-4 px-lg-5">
+                <div class="container px-4 px-lg-5 py-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
-                        <div class="col-lg-6" data-aos="fade-down">
+                        <div class="col-lg-6" data-aos="fade" data-aos-delay="350">
                             <!-- <div class="event-map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15687.554950497257!2d76.20213249275925!3d10.587871401643813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e92bb38608df%3A0x2a4f06ff16e46ffe!2sThiroor%2C%20Thrissur%2C%20Kerala%2C%20India!5e0!3m2!1sen!2suk!4v1770159845168!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div> -->
-                            <img src="/assets/img/santhome-square.png" style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
+                            <img src="/assets/img/santhome-square.png"  style="filter: brightness(1.05)" class="w-100 mb-4" alt="" />
                         </div>
-                        <div class="col-lg-6" data-aos="fade-down">
-                            <h2 class="mt-0 great-vibes-regular" data-content-id="event-4-title">Thiroor Reception</h2>
-                            <h5 class="text-primary mb-3" data-content-id="event-4-subtitle">Homecoming Celebration</h5>
-                            <p class="text-muted mb-4" data-content-id="event-4-desc">
+                        <div class="col-lg-6">
+                            <h2 class="mt-0 great-vibes-regular" data-aos="fade" data-aos-delay="350" data-content-id="event-4-title">Thiroor Reception</h2>
+                            <h5 class="text-primary mb-3" data-aos="fade" data-aos-delay="400" data-content-id="event-4-subtitle">Homecoming Celebration</h5>
+                            <p class="text-muted mb-4" data-aos="fade" data-aos-delay="450" data-content-id="event-4-desc">
                                 Join us for a joyous homecoming reception with family and friends from our beloved Thrissur. This celebration brings together our roots and loved ones
                                 as we share in the joy of our union and create cherished memories in our home state.
                             </p>
-                            <p class="text-muted">
+                            <div class="event-calendar-buttons mt-4" style="float: right;" data-aos="fade" data-aos-delay="350">
+                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('thrissur-reception')">
+                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar"> Add to Calendar</span>
+                                </button>
+                            </div>
+                            <p class="text-muted" data-aos="fade" data-aos-delay="500">
                                 <strong>Date & Time:</strong><br />
                                 1 <sup>st</sup> August 2026 <br /><br />
                                 <strong>Location:</strong><br />
                                 <span data-content-id="event-4-venue">Santhome Square, Thiroor, Thrissur</span>
                             </p>
-                            <div class="event-calendar-buttons mt-4">
-                                <button class="btn btn-outline-primary btn-sm me-2" onclick="addToCalendar('thrissur-reception')">
-                                    <i class="bi bi-calendar-plus"></i> <span data-content-id="event-add-to-calendar"> Add to Calendar</span>
-                                </button>
+
+                            <div class="row gx-4 gx-lg-5 align-items-center mt-4">
+                                <div class="">
+                                        <iframe
+                                            class="event-map-container"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.5484346464347!2d76.2162818389562!3d10.587566815482091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e93b7b53712f%3A0x7d1535960c991ba6!2sSanthome%20Square!5e0!3m2!1sen!2suk!4v1777532223582!5m2!1sen!2suk"
+                                            style="border: 0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            height="50"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
                             </div>
+                            
                             <div class="event-color-palette mt-4">
                                 <p class="small text-muted mb-2" data-content-id="event-theme-title">Event Theme:</p>
                                 <div class="color-circles">
-                                    <a href="/colour/#f1c40f" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
-                                    <a href="/colour/#f7e7ce" target="_blank" data-aos="fade-down" data-aos-delay="300" class="color-circle"></a>
-                                    <a href="/colour/#fffff0" target="_blank" data-aos="fade-down" data-aos-delay="400" class="color-circle"></a>
+                                    <a href="/colour/#f1c40f" target="_blank" data-aos="fade" data-aos-delay="400" class="color-circle"></a>
+                                    <a href="/colour/#f7e7ce" target="_blank" data-aos="fade" data-aos-delay="300" class="color-circle"></a>
+                                    <a href="/colour/#fffff0" target="_blank" data-aos="fade" data-aos-delay="400" class="color-circle"></a>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row gx-4 gx-lg-5 align-items-center mt-4">
-                        <div class="">
-                                <iframe
-                                    class="event-map-container"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.5484346464347!2d76.2162818389562!3d10.587566815482091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e93b7b53712f%3A0x7d1535960c991ba6!2sSanthome%20Square!5e0!3m2!1sen!2suk!4v1777532223582!5m2!1sen!2suk"
-                                    style="border: 0"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    height="50"
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
-                    </div>
+                    
                 </div>
             </section>
         </div>
@@ -506,7 +519,7 @@
         <section class="page-section bg-dark text-white full-height py-5" data-dwelltime="">
             <div class="container px-2 px-lg-1 text-center" data-aos="fade-down">
                 <p>Share your moments to the Community Album</p>
-                <a class="btn btn-light btn-xl" href="https://photos.app.goo.gl/3rtFZYaDUo2wQtv97">Upload Memories!</a>
+                <a class="btn btn-light btn-xl" target="_blank" href="https://photos.app.goo.gl/3rtFZYaDUo2wQtv97">Upload Memories!</a>
             </div>
         </section>
 
