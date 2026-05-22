@@ -43,7 +43,7 @@ function openLangModal() {
 
 function shareLink() {
     const shareData = {
-        title: "Check this out!",
+        title: "You are cordially invited to Our Wedding!",
         url: window.location.href,
     };
 
