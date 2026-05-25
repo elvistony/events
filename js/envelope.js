@@ -1,4 +1,6 @@
 
+IS_FULLSCREEN = false
+
 function loadEnvelope(){
     setTimeout(()=>{
         window.scrollTo(0, 0);
@@ -10,6 +12,7 @@ function loadEnvelope(){
     // document.querySelector('.envelope-container').style.display = 'none';
     
     document.getElementById('waxstart').addEventListener('click',()=>{
+        openFullscreen()
         console.log("Trigger")
         document.querySelector('.masthead-video').play();
         document.body.dataset.envelope='open';
@@ -45,6 +48,7 @@ function loadEnvelope(){
         });
         
         togglePlay();
+        
             },2500);
         },100);
     })
@@ -61,3 +65,22 @@ function loadEnvelope(){
     document.body.style.alignContent='center';
 }
 }
+
+
+function openFullscreen() {
+    let elem = document.documentElement;
+    try {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+        IS_FULLSCREEN = true;
+        document.querySelector('#btnKill').style.display='block';
+    } catch (error) {
+        console.log("Unable to Open Fullscreen")
+    }
+}
+

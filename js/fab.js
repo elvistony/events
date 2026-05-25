@@ -25,6 +25,23 @@ function toggleDrawer() {
 //     }
 // }
 
+function closeTab(){
+    closeFullscreen();
+    document.querySelector('#btnKill').style.display='none';
+    
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
 function openLangModal() {
     $("#langModal").modal("show");
     toggleDrawer(); // Close drawer when modal opens

@@ -5,7 +5,7 @@ let currentAnimationId = null;
 let isUserInteracting = false;
 
 try {
-    document.getElementById('bgm').volume=0.4;
+    document.getElementById('bgm').volume=0.05;
 } catch (error) {
     console.log(error)
 }
@@ -16,7 +16,7 @@ const DEFAULT_DWELL_TIME = 10; // seconds
 function togglePlay() {
     isPlaying = !isPlaying;
     const playIcon = document.getElementById('playIcon');
-    document.getElementById('bgm').volume=0.4;
+    document.getElementById('bgm').volume=0.05;
     if (isPlaying) {
         playIcon.className = 'fa fa-pause';
         playIcon.parentElement.classList.add('burgundy')
@@ -126,7 +126,7 @@ function animateScroll(start, end, duration) {
             const progress = Math.min(elapsed / duration, 1);
             
             // Linear scroll to maintain "slow scroll" effect
-            const currentPos = start + (end - start) * progress;
+            const currentPos = start + (end+5 - start) * progress;
             window.scrollTo(0, currentPos);
 
             if (progress < 1) {

@@ -83,36 +83,111 @@
 //     URL.revokeObjectURL(url);
 // }
 
+// function addToCalendar(eventId) {
+//     // Event data - Precise UTC times to respect local timezones
+//     const events = {
+//         'madhuram': {
+//             title: 'Madhuram Veppu - Elvis & Maritta',
+//             description: 'Pre-Wedding Celebration - Traditional ceremony filled with joy, family, and cherished traditions.',
+//             location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
+//             startDateTime: '20260722T130000', // 17:00 GST -> 13:00 UTC
+//             endDateTime: '20260722T180000'   // 22:00 GST -> 18:00 UTC
+//         },
+//         'wedding': {
+//             title: 'Wedding Ceremony - Elvis & Maritta',
+//             description: 'Our Wedding Ceremony - Join us as we make our vows before God and our loved ones.',
+//             location: 'St. Anthony of Padua RC Church, Ras Al Khaimah, UAE',
+//             startDateTime: '20260723T110000', // 15:00 GST -> 11:00 UTC
+//             endDateTime: '20260723T180000'   // 22:00 GST -> 18:00 UTC
+//         },
+//         'uae-reception': {
+//             title: 'UAE Reception - Elvis & Maritta',
+//             description: 'Celebration in the Emirates - Evening of celebration, delicious food, and joyful dancing.',
+//             location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
+//             startDateTime: '20260724T130000', // 17:00 GST -> 13:00 UTC
+//             endDateTime: '20260724T180000'   // 22:00 GST -> 18:00 UTC
+//         },
+//         'thrissur-reception': {
+//             title: 'Thrissur Reception - Elvis & Maritta',
+//             description: 'Homecoming Celebration - Join us for a joyous homecoming reception with family and friends.',
+//             location: 'Santhome Square, Thiroor, Thrissur',
+//             startDateTime: '20260801T113000', // 17:00 IST -> 11:30 UTC
+//             endDateTime: '20260801T163000'   // 22:00 IST -> 16:30 UTC
+//         }
+//     };
+
+//     const eventData = events[eventId];
+    
+//     if (!eventData) {
+//         alert('Event not found');
+//         return;
+//     }
+
+//     // Create ICS file content (\n inside DESCRIPTION renders as an actual newline in calendars)
+//     const icsContent = `BEGIN:VCALENDAR
+// VERSION:2.0
+// PRODID:-//Elvis & Maritta Wedding//EN
+// CALSCALE:GREGORIAN
+// METHOD:PUBLISH
+// X-WR-CALNAME:Elvis & Maritta Wedding Events
+// X-WR-TIMEZONE:UTC
+// BEGIN:VEVENT
+// UID:${eventId}-elvis-maritta-wedding@wedding.com
+// DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+// DTSTART:${eventData.startDateTime}Z
+// DTEND:${eventData.endDateTime}Z
+// SUMMARY:${eventData.title}
+// DESCRIPTION:${eventData.description}\\n\\nView details: https://theelvismarittastory.de/
+// URL:https://theelvismarittastory.de/
+// LOCATION:${eventData.location}
+// SEQUENCE:0
+// STATUS:CONFIRMED
+// TRANSP:OPAQUE
+// END:VEVENT
+// END:VCALENDAR`;
+
+//     // Create blob and download
+//     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+//     const link = document.createElement('a');
+//     const url = URL.createObjectURL(blob);
+    
+//     link.href = url;
+//     link.download = `${eventId}-elvis-maritta-wedding.ics`;
+//     link.click();
+    
+//     URL.revokeObjectURL(url);
+// }
+
 function addToCalendar(eventId) {
-    // Event data - Precise UTC times to respect local timezones
+    // Event data - Recalculated to UTC based on your new event timings
     const events = {
         'madhuram': {
             title: 'Madhuram Veppu - Elvis & Maritta',
             description: 'Pre-Wedding Celebration - Traditional ceremony filled with joy, family, and cherished traditions.',
             location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
-            startDateTime: '20260722T130000', // 17:00 GST -> 13:00 UTC
+            startDateTime: '20260722T140000', // 18:00 GST -> 14:00 UTC
             endDateTime: '20260722T180000'   // 22:00 GST -> 18:00 UTC
         },
         'wedding': {
             title: 'Wedding Ceremony - Elvis & Maritta',
             description: 'Our Wedding Ceremony - Join us as we make our vows before God and our loved ones.',
             location: 'St. Anthony of Padua RC Church, Ras Al Khaimah, UAE',
-            startDateTime: '20260723T110000', // 15:00 GST -> 11:00 UTC
+            startDateTime: '20260723T120000', // 16:00 GST -> 12:00 UTC
             endDateTime: '20260723T180000'   // 22:00 GST -> 18:00 UTC
         },
         'uae-reception': {
             title: 'UAE Reception - Elvis & Maritta',
             description: 'Celebration in the Emirates - Evening of celebration, delicious food, and joyful dancing.',
             location: 'Movenpick Resort, Al Marjan Island Boulevard, Ras Al Khaimah',
-            startDateTime: '20260724T130000', // 17:00 GST -> 13:00 UTC
-            endDateTime: '20260724T180000'   // 22:00 GST -> 18:00 UTC
+            startDateTime: '20260724T140000', // 18:00 GST -> 14:00 UTC
+            endDateTime: '20260724T190000'   // 23:00 GST -> 19:00 UTC
         },
         'thrissur-reception': {
             title: 'Thrissur Reception - Elvis & Maritta',
             description: 'Homecoming Celebration - Join us for a joyous homecoming reception with family and friends.',
             location: 'Santhome Square, Thiroor, Thrissur',
             startDateTime: '20260801T113000', // 17:00 IST -> 11:30 UTC
-            endDateTime: '20260801T163000'   // 22:00 IST -> 16:30 UTC
+            endDateTime: '20260801T153000'   // 21:00 IST -> 15:30 UTC
         }
     };
 
@@ -123,7 +198,7 @@ function addToCalendar(eventId) {
         return;
     }
 
-    // Create ICS file content (\n inside DESCRIPTION renders as an actual newline in calendars)
+    // Create ICS file content
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Elvis & Maritta Wedding//EN
