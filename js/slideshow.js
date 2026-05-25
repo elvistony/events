@@ -4,12 +4,19 @@ let autoScrollThrottle;
 let currentAnimationId = null;
 let isUserInteracting = false;
 
+try {
+    document.getElementById('bgm').volume=0.4;
+} catch (error) {
+    console.log(error)
+}
+
 // Configuration
 const DEFAULT_DWELL_TIME = 10; // seconds
 
 function togglePlay() {
     isPlaying = !isPlaying;
     const playIcon = document.getElementById('playIcon');
+    document.getElementById('bgm').volume=0.4;
     if (isPlaying) {
         playIcon.className = 'fa fa-pause';
         playIcon.parentElement.classList.add('burgundy')
