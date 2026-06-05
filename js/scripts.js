@@ -235,12 +235,63 @@ END:VCALENDAR`;
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    // // COUNTDOWN TIMER FUNCTIONALITY
+    // function initCountdown() {
+    //     // Set the wedding date (CHANGE THIS TO YOUR ACTUAL WEDDING DATE)
+    //     // Format: new Date('Month Day, Year Hour:Minute:Second')
+    //     const weddingDate = new Date('July 23, 2026 12:00:00').getTime();
+    //     // const weddingDate = new Date('Jan 23, 2026 12:00:00').getTime();
+    //     function updateCountdown() {
+    //         const now = new Date().getTime();
+    //         const timeRemaining = weddingDate - now;
+            
+    //         if (timeRemaining > 0) {
+    //             // Calculate time units
+    //             const totalSeconds = Math.floor(timeRemaining / 1000);
+    //             const totalMinutes = Math.floor(totalSeconds / 60);
+    //             const totalHours = Math.floor(totalMinutes / 60);
+    //             const totalDays = Math.floor(totalHours / 24);
+    //             const weeks = Math.floor(totalDays / 7);
+                
+    //             // Calculate individual units
+    //             const days = totalDays % 7;
+    //             const hours = totalHours % 24;
+    //             const minutes = totalMinutes % 60;
+    //             const seconds = totalSeconds % 60;
+                
+    //             // Update the DOM
+    //             document.getElementById('weeks').textContent = weeks;
+    //             document.getElementById('days').textContent = days;
+    //             document.getElementById('hours').textContent = hours;
+    //             document.getElementById('minutes').textContent = minutes;
+    //             document.getElementById('seconds').textContent = seconds;
+    //         } else {
+    //             // Wedding date has passed
+    //             document.querySelector('.countdown-container').style.display='none';
+    //             document.getElementById('weeks').textContent = '0';
+    //             document.getElementById('days').textContent = '0';
+    //             document.getElementById('hours').textContent = '0';
+    //             document.getElementById('minutes').textContent = '0';
+    //             document.getElementById('seconds').textContent = '0';
+    //         }
+    //     }
+        
+    //     // Initial update
+    //     updateCountdown();
+        
+    //     // Update every second
+    //     setInterval(updateCountdown, 1000);
+    // }
+    
     // COUNTDOWN TIMER FUNCTIONALITY
     function initCountdown() {
         // Set the wedding date (CHANGE THIS TO YOUR ACTUAL WEDDING DATE)
         // Format: new Date('Month Day, Year Hour:Minute:Second')
-        const weddingDate = new Date('July 23, 2026 12:00:00').getTime();
-        // const weddingDate = new Date('Jan 23, 2026 12:00:00').getTime();
+        const weddingDate = new Date('July 23, 2026 16:00:00 GMT+0400').getTime();
+        // const weddingDate = new Date('July 23, 2025 12:00:00').getTime();
+        // Create a variable to hold the interval ID so we can stop it later
+        let countdownInterval;
+
         function updateCountdown() {
             const now = new Date().getTime();
             const timeRemaining = weddingDate - now;
@@ -267,22 +318,25 @@ window.addEventListener('DOMContentLoaded', event => {
                 document.getElementById('seconds').textContent = seconds;
             } else {
                 // Wedding date has passed
-                document.querySelector('.countdown-container').style.display='none';
-                document.getElementById('weeks').textContent = '0';
-                document.getElementById('days').textContent = '0';
-                document.getElementById('hours').textContent = '0';
-                document.getElementById('minutes').textContent = '0';
-                document.getElementById('seconds').textContent = '0';
+                // 1. Stop the timer from continuing to run in the background
+                clearInterval(countdownInterval);
+
+                // 2. Display the message inside the container
+                const container = document.querySelector('.countdown-container');
+                container.outerHTML = `
+                <h2 class='married-message'>We're Married!</h2>
+                <h4 class='married-message'>23<sup>rd</sup> July 2026</h4>
+                `;
             }
         }
         
         // Initial update
         updateCountdown();
         
-        // Update every second
-        setInterval(updateCountdown, 1000);
+        // Update every second and store the interval ID
+        countdownInterval = setInterval(updateCountdown, 1000);
     }
-    
+
     // Initialize countdown
     initCountdown();
 

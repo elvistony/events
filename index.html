@@ -66,6 +66,7 @@
         <link rel="stylesheet" href="css/translations.css" />
         <link rel="stylesheet" href="css/flare.css">
         <link rel="stylesheet" href="css/fade-ani.css">
+        <link rel="stylesheet" href="css/petals.css">
     </head>
     <body id="page-top" data-lang="en" data-envelope="closed">
 
@@ -125,7 +126,7 @@
         <!-- Masthead-->
         <header class="page-section masthead" style="padding-bottom: 5rem;" id="wedding" data-dwelltime="5">
             <div class="parallax-video">
-                <video muted playsinline class="masthead-video" poster="https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg" loop>
+                <video muted playsinline class="masthead-video" style="filter: sepia(0.3);" poster="https://images.pexels.com/photos/7140404/pexels-photo-7140404.jpeg" loop>
                     <source src="/assets/media/white-circles.mp4" type="video/mp4" />
                     <source src="https://cdn.pixabay.com/video/2025/03/06/262864_small.mp4?download" type="video/mp4">
                 </video>
@@ -347,7 +348,7 @@
                                 <div class="">
                                         <iframe
                                             class="event-map-container"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.9945924282715!2d55.74086207497738!3d25.671473977408752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef609baa6559f57%3A0xebe1edc5a93f8b8a!2sM%C3%B6venpick%20Resort%20Al%20Marjan%20Island!5e0!3m2!1sen!2suk!4v1777531936873!5m2!1sen!2suk"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.1905479856846!2d55.80392147519189!3d25.664977477412847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5e02b8ca7b447%3A0x54c47e34cb7eff61!2sSt.%20Anthony%20of%20Padua%20Roman%20Catholic%20Church%2C%20Ras%20Al%20Khaimah!5e0!3m2!1sen!2suk!4v1780694743976!5m2!1sen!2suk"
                                             style="border: 0"
                                             allowfullscreen=""
                                             loading="lazy"
@@ -504,7 +505,7 @@
                             </div>
                             <p class="text-muted" data-aos="fade" data-aos-delay="500">
                                 <strong>Date & Time:</strong><br />
-                                1 <sup>st</sup> August 2026 at 5:00 PM - 9:00PM<br /><br />
+                                1 <sup>st</sup> August 2026 at 11:00 AM - 4:00PM<br /><br />
                                 <strong>Location:</strong><br />
                                 <span data-content-id="event-4-venue">Santhome Square, Thiroor, Thrissur</span>
                             </p>
@@ -561,7 +562,9 @@
         <div class="banner-flowers-top"></div>
 
         <!-- <audio id="bgm" preload="auto" onloadeddata="this.currentTime = 29.2" src="/assets/media/ordinary.m4a" loop hidden></audio> -->
-        <audio id="bgm" preload="auto" volume="0.5" onloadeddata="this.currentTime = 41.8" src="/assets/media/olivia.m4a" loop hidden></audio>
+        <!-- <audio id="bgm" preload="auto" volume="1" onloadeddata="this.currentTime = 41.8" src="/assets/media/olivia.m4a" loop hidden></audio> -->
+        <audio id="bgm" preload="auto" volume="1" src="/assets/media/olivia_low.mp3" hidden></audio>
+
         <!-- <audio id="bgm" preload="auto" onloadeddata="this.currentTime=54.8;" src="/assets/media/raye.m4a" loop hidden></audio> -->
 
         <div class="fab-wrapper">
@@ -630,5 +633,7 @@
         <script>
             // AOS.init();
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <script src="/js/petals.js"></script>
     </body>
 </html>

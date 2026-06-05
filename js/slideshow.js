@@ -5,7 +5,7 @@ let currentAnimationId = null;
 let isUserInteracting = false;
 
 try {
-    document.getElementById('bgm').volume=0.05;
+    // document.getElementById('bgm').volume=0.05;
 } catch (error) {
     console.log(error)
 }
@@ -16,7 +16,7 @@ const DEFAULT_DWELL_TIME = 10; // seconds
 function togglePlay() {
     isPlaying = !isPlaying;
     const playIcon = document.getElementById('playIcon');
-    document.getElementById('bgm').volume=0.05;
+    // document.getElementById('bgm').volume=0.05;
     if (isPlaying) {
         playIcon.className = 'fa fa-pause';
         playIcon.parentElement.classList.add('burgundy')

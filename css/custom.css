@@ -92,6 +92,19 @@ a.text-primary:hover {
   min-height: 60vh;
 }
 
+.married-message{
+  font-family: "Mea Culpa", "mea-culpa-regular", cursive;
+  text-align: center;
+  font-size:3.5em;
+  color:#800020;
+}
+
+h4.married-message{
+  font-family: "Texturina", serif;
+  font-size:2em;
+  color:black;
+}
+
 .quote > h4{
   align-content: center;
 }

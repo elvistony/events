@@ -1,12 +1,15 @@
 :root {
-    --base-paper: #fff6d1;
-    --paper-left: 0.9;
-    --paper-right: 0.9;
+    --base-paper: #fff6d0;
+    --paper-left: 0.6;
+    --paper-right: 0.6;
     --paper-bottom: 1;
     --text-color: #e7a200;
     --speed: 7s;
     --texture-repeat:150vh;
-    --texture: url("https://img.freepik.com/free-vector/gradient-golden-linear-background_23-2148957754.jpg");
+    /* --texture: url("https://img.freepik.com/free-vector/gradient-golden-linear-background_23-2148957754.jpg"); */
+    /* --texture: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20240717%2Foriginal%2Fpngtree-floral-fabric-texture-with-a-beautiful-background-png-image_15570575.png&f=1&nofb=1&ipt=32032ea3c80606dadea6bbb8875c97336735db9f9272c6bee0779fa4a3a586ab") */
+    /* --texture: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.creativefabrica.com%2Fwp-content%2Fuploads%2F2022%2F12%2F17%2FFloral-pattern-png-Graphics-52920985-1.png&f=1&nofb=1&ipt=61f0ac5fc87690c40303a2a8ba974241b4d8c315b31a718a1a07bd53d4b12748") */
+    --texture:url("/assets/img/envelope-flow.png")
 }
 
 /* https://www.transparenttextures.com/patterns/gray-floral.png */
@@ -236,7 +239,7 @@ body{
     height: 180px;
     margin-left: -90px;
     border-radius: 50%;
-    background-image: url("/assets/img/wax-seal-golden-burgundy.png");
+    background-image: url("/assets/img/wax-seal-royal.png");
     background-color: transparent;
     background-size: cover;
     background-position: center;
