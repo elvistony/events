@@ -26,6 +26,9 @@ const colorLibrary = {
     "f7e7ce":{ name:"Champange"},
     "f1c40f":{ name:"Golden"},
     "fffff0": { name:"White"},
+
+    "1e1a4d":{ name:"Navy Blue"},
+    "d0872e":{name:"Mustard Yellow"}
 };
 
 function applyColorFromHash() {
