@@ -28,7 +28,7 @@ const colorLibrary = {
     "fffff0": { name:"White"},
 
     "1e1a4d":{ name:"Navy Blue"},
-    "d0872e":{name:"Mustard Yellow"}
+    "f7e6cA":{name:"Champagne"}
 };
 
 function applyColorFromHash() {
