@@ -10,25 +10,25 @@ function showColorOverlay(color) {
 // 1. Your Lookup Dictionary
 const colorLibrary = {
 
-    "f1c40f":{ name:"Golden"},
-    "fafaf9": { name:"White"},
+    "f1c40f":{ name:"Golden" },
+    "fafaf9": { name:"White" },
 
-    "800020": { name: "Burgundy"},
-    "ffd8d8": { name: "Blush"},
+    "800020": { name: "Burgundy" },
+    "ffd8d8": { name: "Blush" },
     "228b22": { name: "Forest Green" },
-    "fffff0": { name: "Ivory"},
+    "fffff0": { name: "Ivory" },
 
     
 
-    "cc5500":{ name:"Burnt Orange"},
-    "fafaf9": { name:"White"},
+    "cc5500":{ name:"Burnt Orange" },
+    "fafaf9":{ name:"White" },
 
-    "f7e7ce":{ name:"Champange"},
+    "f7e7ce":{ name:"Champange" },
     "f1c40f":{ name:"Golden"},
-    "fffff0": { name:"White"},
+    "fffff0":{ name:"White"},
 
-    "1e1a4d":{ name:"Navy Blue"},
-    "f7e6cA":{name:"Champagne"}
+    "1e1a4d":{ name:"Navy Blue" },
+    "f7e6cA":{ name:"Champagne" }
 };
 
 function applyColorFromHash() {
